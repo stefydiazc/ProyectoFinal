@@ -1,0 +1,8 @@
+<?php
+
+$nombre = $_POST['name_field'];
+$nombre = $_POST['name_field'];
+$nombre = $_POST['name_field'];
+
+$nombre = $_POST['name_field'];
+?>
