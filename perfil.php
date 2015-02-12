@@ -56,7 +56,7 @@
             <br>
             <div class="container-fluid"> 
             <div class="col-lg-6">
-    <form action="perfil.php" id="contact-form" class="form-horizontal" method="post">
+    <form action="usuario-admin.php" id="contact-form" class="form-horizontal" method="post" value="<?php echo $ObjUsuario->getNombre(); ?>" autofocus required />>
         <div class="form-group">
         <div class="col-lg-12 col-lg-14">
           <label class="col-lg-3 control-label" for="name">Nombres (*):</label>
@@ -117,7 +117,7 @@
             <div class="col-lg-offset-7 col-lg-4">
                 <!--<button type="submit" class="btn btn-success">Guardar</button>
                 <button type="reset" class="btn btn-primary">Cancelar</button>-->
-                <input class="btn btn-success" type="button" value="Continuar" onClick="enviar()">
+                <input class="btn btn-success" type="submit" value="Continuar" onClick="enviar()">
             </div>
      </div>   
        </div>  
