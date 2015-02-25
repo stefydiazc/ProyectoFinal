@@ -11,7 +11,7 @@ class Receta
        $this->idReceta = $idReceta;
        $this->idPlato = $idPlato;
        $this->nombre = $nombre;
-       $this->idUsuario = $descripcion;
+       $this->descripcion = $descripcion;
      }
     
      function setIdReceta($idReceta){
