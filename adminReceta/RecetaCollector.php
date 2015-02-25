@@ -14,20 +14,20 @@ class RecetaCollector extends Collector
 */
   function createReceta($idReceta, $idPlato, $nombre, $descripcion) {    
     $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.recetas 
-                                      (idReceta, idReceta, nombre, descripcion) VALUES (?, ?)",
-                                       array(null, "{$idReceta}","{$idPlato}","{$nombre}","{$descripcion}"));
+                                      (idrecetas, idplato, nombre, descripcion) VALUES (?, ?, ?, ?)",
+                                       array(null, "{$idrecetas}","{$idplato}","{$nombre}","{$descripcion}"));
   }  
 
-  function readReceta() {
+  function readRecetas() {
     $rows = self::$db->getRows("SELECT * FROM recetas ");        
     $arrayReceta= array();        
-    foreach ($rows as $receta){
-      $aux = new Receta($receta{'idReceta'},$receta{'idPlato'},$receta{'nombre'}$receta{'descripcion'},);
+    foreach ($rows as $r){
+      $aux = new Receta($r{'idrecetas'},$r{'idplato'},$r{'nombre'}$r{'descripcion'});
       array_push($arrayReceta, $aux);
   
     return $arrayReceta;        
   }
-  
+/*  
   function updateReceta($idReceta,$descripcion,$nombre,$descripcion) {    
     $insertrow = self::$db->updateRow("UPDATE clubNutricion.recetas SET recetas.nombre = ?  WHERE recetas.idusuario = ? ", array( "{$nombre}",$id));
   }  
@@ -35,7 +35,7 @@ class RecetaCollector extends Collector
   function deleteReceta($id) {    
     $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.recetas WHERE idrecetas= ?", array("{$id}"));
   }  
-
+*/
 
 
 }
