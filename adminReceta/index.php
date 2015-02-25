@@ -8,18 +8,19 @@ $RecetaCollectorObj = new RecetaCollector();
 <body>
 <div id="main">
 <table>
-<tr><td><a href="formularioRecetaInsert.php">Nuevo</a></td></tr>
+<tr><td><a href="formularioRecetaInsert.php">Nueva Receta</a></td></tr>
 <tr>
 <td><strong>Id Receta</strong></td>
 <td><strong>Id Plato</strong></td>
 <td><strong>Nombre</strong></td>
-<td><strong>Descripcion</strong></td>
+<td><strong>Descripci&oacute;n</strong></td>
 <tr>	
 <?php
 foreach ($RecetaCollectorObj->readRecetas() as $ObjReceta){
+	//print_r($r);
   echo "<tr>";
   echo "<td>".$ObjReceta->getIdReceta() ."</td>";
-  echo "<td>".$ObjReceta->getPlato()."</td>";
+  echo "<td>".$ObjReceta->getIdPlato()."</td>";
   echo "<td>".$ObjReceta->getNombre() ."</td>";
   echo "<td>".$ObjReceta->getDescripcion()."</td>";
 

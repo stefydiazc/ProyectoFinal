@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Formulario Usuario</title>
+<title>Formulario Receta</title>
 </head>
 <body>
 
@@ -18,11 +18,11 @@ $ObjReceta = $RecetaCollectorObj->showReceta($id);
 <h2> Editar Receta </h2>
 <form action="editar.php" method="post" >
 <p>
-Id Receta: <input type="text" name="idReceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
+Id Receta: <input type="text" name="idrecetas" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
 </p>
 
 <p>
-Id Plato: <input type="text" name="idPlato"  value="<?php echo $ObjReceta->getIdPlato(); ?>" autofocus required />
+Id Plato: <input type="text" name="idplato"  value="<?php echo $ObjReceta->getIdPlato(); ?>" autofocus required />
 </p>
 
 <p>

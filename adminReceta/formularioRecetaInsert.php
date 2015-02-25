@@ -8,6 +8,7 @@
 <form action="insert.php" method="post" >
 <p>
 Nombre: <input type="text" name="nombre" autofocus required />
+Descripcion: <input type="text" name="descripcion" autofocus required />
 </p>
 <input type="submit" value="Submit!" />
 
