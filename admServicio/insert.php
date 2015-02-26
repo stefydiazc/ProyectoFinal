@@ -6,30 +6,22 @@
 <div id="main">
 <?php
 $nombre = $_POST ['nombre'];
-$apellido = $_POST ['apellido'];
-$email = $_POST ['email'];
-$contrasena = $_POST ['contrasena'];
-$genero = $_POST ['genero'];
-$actfisica = $_POST ['actfisica'];
-$edad = $_POST ['edad'];
-$estatura = $_POST ['estatura'];
-$peso = $_POST ['peso'];
-$objetivo = $_POST ['objetivo'];
+$descripcion = $_POST ['descripcion'];
 
 //echo $peso."</br>";
 //echo $objetivo."</br>";
 //$valor="manuel";
-echo 'Hola ' . htmlspecialchars($nombre)."  ". htmlspecialchars($apellido) . ' !';
+echo 'Hola ' . htmlspecialchars($nombre)."  ". htmlspecialchars($descripcion) . '.';
 
 
-include_once("UsuarioCollector.php");
+include_once("ServicioCollector.php");
 
-$UsuarioCollectorObj = new UsuarioCollector();
-$UsuarioCollectorObj->createUsuario($nombre, $apellido, $email, $contrasena, $genero, $actfisica, $edad, $estatura, $peso, $objetivo);
+$ServicioCollectorObj = new ServicioCollector();
+$ServicioCollectorObj->createServicio($nombre, $descripcion);
 echo "</br>";
-echo "Usuario Agregado </br>";
+echo "Servicio Agregado </br>";
 ?>
-<div><a href="usuario-admin.php">Volver al Inicio</a></div>
+<div><a href="servicio-admin.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

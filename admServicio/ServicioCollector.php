@@ -1,48 +1,44 @@
 <?php
 
-include_once('Usuario.php');
+include_once('Servicio.php');
 include_once('Collector.php');
 
-class UsuarioCollector extends Collector
+class ServicioCollector extends Collector
 {
   
-  function showUsuario($idUsuario) {
-    $row = self::$db->getRows("SELECT * FROM usuario where idusuario= ? ", array("{$idUsuario}")); 
-    $ObjUsuario = new Usuario($row[0]{'idusuario'},$row[0]{'nombre'},$row[0]{'apellido'},
-                  $row[0]{'email'}, $row[0]{'contrasena'}, $row[0]{'genero'}, $row[0]{'actfisica'},
-                  $row[0]{'edad'}, $row[0]{'estatura'}, $row[0]{'peso'}, $row[0]{'objetivo'});
-    return $ObjUsuario;
+  function showServicio($idServicio) {
+    $row = self::$db->getRows("SELECT * FROM servicio where idServicio= ? ", array("{$idServicio}")); 
+    $ObjServicio = new Usuario($row[0]{'idServicio'},$row[0]{'nombre'},$row[0]{'descripcion'});
+    return $ObjServicio;
   }
 
-  function createUsuario($nombre, $apellido, $email, $contrasena, $genero, $actfisica, $edad, $estatura, $peso, $objetivo) {    
-    $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.usuario (idusuario, nombre, apellido, email, contrasena, genero, actfisica, edad, estatura, peso, objetivo)
-                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(null, "{$nombre}", "{$apellido}", "{$email}", "{$contrasena}", "{$genero}", "{$actfisica}", "{$edad}", "{$estatura}", "{$peso}", "{$objetivo}"));
+  function createServicio($nombre, $descripcion) {    
+    $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.servicio (idServicio, nombre, descripcion)
+                                      VALUES (?, ?, ?, ?)", array(null, "{$nombre}", "{$descripcion}"));
   }  
 
-  function readUsuarios() {
-    $rows = self::$db->getRows("SELECT * FROM usuario ");        
-    $arrayUsuario= array();        
+  function readServicios() {
+    $rows = self::$db->getRows("SELECT * FROM servicio ");        
+    $arrayServicio= array();        
     foreach ($rows as $c){
       //print_r($c);
-      $aux = new Usuario($c{'idusuario'},$c{'nombre'}, $c{'apellido'}, $c{'email'}, $c{'contrasena'}, $c{'genero'}, $c{'actfisica'}, $c{'edad'}, $c{'estatura'}, $c{'peso'}, $c{'objetivo'});
-      array_push($arrayUsuario, $aux);
+      $aux = new Servicio($c{'idServicio'},$c{'nombre'}, $c{'descripcion'});
+      array_push($arrayServicio, $aux);
     }
       //print_r($arrayUsuario);
     
     return $arrayUsuario;        
   }
   
-  function updateUsuario($idUsuario, $nombre, $apellido, $email, $contrasena, $genero, $actfisica, $edad, $estatura, $peso, $objetivo) {
+  function updateServicio($idServicio, $nombre, $apellido) {
 
-    echo "$idUsuario. $nombre. $apellido. $email. $contrasena. $genero. $actfisica. $edad. $estatura. $peso. $objetivo";
-    $insertrow = self::$db->updateRow("UPDATE clubNutricion.usuario SET usuario.nombre = ?, usuario.apellido = ?, usuario.email = ?, 
-                      usuario.contrasena = ?, usuario.genero = ?, usuario.actfisica = ?, usuario.edad = ?, usuario.estatura = ?, 
-                      usuario.peso = ?, usuario.objetivo = ? WHERE usuario.idusuario = ? ", array("{$nombre}", "{$apellido}",
-                      "{$email}", "{$contrasena}", "{$genero}", "{$actfisica}", "{$edad}", "{$estatura}", "{$peso}", "{$objetivo}",$idUsuario));
+   // echo "$idServicio. $nombre. $descripcion;
+    $insertrow = self::$db->updateRow("UPDATE clubNutricion.servicio SET servicio.nombre = ?, servicio.descripcion = ? 
+                                      WHERE servicio.idservicio = ? ", array("{$nombre}", "{$descripcion}",$idServicio));
   }  
 
-  function deleteUsuario($idUsuario) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.usuario WHERE idusuario= ?", array("{$idUsuario}"));
+  function deleteServicio($idServicio) {    
+    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.servicio WHERE idservicio= ?", array("{$idServicio}"));
   }  
 
 
