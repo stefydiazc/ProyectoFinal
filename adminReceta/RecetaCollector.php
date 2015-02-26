@@ -30,12 +30,13 @@ class RecetaCollector extends Collector
     return $arrayReceta;        
   }
   
-  function updateReceta($idReceta,$descripcion,$nombre,$descripcion) {    
-    $insertrow = self::$db->updateRow("UPDATE clubNutricion.recetas SET recetas.nombre = ?  WHERE recetas.idrecetas = ? ", array( "{$nombre}",$id));
+  function updateReceta($idReceta,$idPlato,$nombre,$descripcion) {    
+    echo "$idrecetas. $idplato, $nombre, $descripcion";
+    $insertrow = self::$db->updateRow("UPDATE clubNutricion.recetas SET recetas.nombre = ?  WHERE recetas.descripcion = ? ", array( "{$nombre}", "{$descripcion}",$idReceta));
   }  
 
-  function deleteReceta($id) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.recetas WHERE idrecetas= ?", array("{$id}"));
+  function deleteReceta($idReceta) {    
+    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.recetas WHERE idrecetas= ?", array("{$idReceta}"));
   }  
 }
 ?>

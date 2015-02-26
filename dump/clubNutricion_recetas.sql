@@ -31,7 +31,7 @@ CREATE TABLE `recetas` (
   `descripcion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idrecetas`),
   UNIQUE KEY `idrecetas_UNIQUE` (`idrecetas`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `recetas` (
 
 LOCK TABLES `recetas` WRITE;
 /*!40000 ALTER TABLE `recetas` DISABLE KEYS */;
+INSERT INTO `recetas` VALUES (10,20,'Ensalada Cesar','Lechuga romana, pechuga de pollo a la plancha, cruton de pan ');
 /*!40000 ALTER TABLE `recetas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-19 13:26:03
+-- Dump completed on 2015-02-25 14:03:34

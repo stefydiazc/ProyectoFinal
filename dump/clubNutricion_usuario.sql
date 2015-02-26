@@ -28,7 +28,6 @@ CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(45) DEFAULT NULL,
-  `educacion` varchar(45) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
   `contrasena` varchar(45) DEFAULT NULL,
   `genero` int(11) DEFAULT NULL,
@@ -39,7 +38,7 @@ CREATE TABLE `usuario` (
   `objetivo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idusuario`),
   UNIQUE KEY `idusuario_UNIQUE` (`idusuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,6 +47,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (11,'stefy','diaz','stef','1111',0,'ligera',11,123,NULL,NULL),(12,'ojojg','','','',0,'',0,0,0,'');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-19 13:26:03
+-- Dump completed on 2015-02-25 14:03:34

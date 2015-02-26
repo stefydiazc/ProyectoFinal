@@ -14,7 +14,7 @@ echo "Edici&oacute;n en proceso ....  </br>";
 
 include_once("RecetaCollector.php");
 $RecetaCollectorObj = new RecetaCollector();
-$RecetaCollectorObj->updateReceta($idReceta,$nombre);
+$RecetaCollectorObj->updateReceta($idReceta,$idPlato;$nombre,$descripcion);
 
 echo "id :".$idReceta." actualizado a:".$nombre." </br>";
 ?>
