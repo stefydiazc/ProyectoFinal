@@ -9,6 +9,9 @@
 <p>
 Nombre: <input type="text" name="nombre" autofocus required />
 Descripcion: <input type="text" name="descripcion" autofocus required />
+Informacion Nutricional: <input type="text" name="informacionnutricional" autofocus required />
+Foto: <input type="text" name="foto" autofocus required />
+
 </p>
 <input type="submit" value="Submit!" />
 

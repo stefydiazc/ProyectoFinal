@@ -18,35 +18,29 @@ USE `clubNutricion`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuxplanxrec`
+-- Table structure for table `servicio`
 --
 
-DROP TABLE IF EXISTS `usuxplanxrec`;
+DROP TABLE IF EXISTS `servicio`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usuxplanxrec` (
-  `idusuxplanxrec` int(11) NOT NULL AUTO_INCREMENT,
-  `idusuario` int(11) DEFAULT NULL,
-  `idplan` int(11) DEFAULT NULL,
-  `idrecetas` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idusuxplanxrec`),
-  UNIQUE KEY `idusuxplanxrec_UNIQUE` (`idusuxplanxrec`),
-  KEY `fk_usuxplanxrec_1_idx` (`idusuario`),
-  KEY `fk_usuxplanxrec_2_idx` (`idplan`),
-  KEY `fk_usuxplanxrec_3_idx` (`idrecetas`),
-  CONSTRAINT `fk_usuxplanxrec_1` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuxplanxrec_2` FOREIGN KEY (`idplan`) REFERENCES `plan` (`idplan`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuxplanxrec_3` FOREIGN KEY (`idrecetas`) REFERENCES `recetas` (`idrecetas`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `servicio` (
+  `idServicio` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`idServicio`),
+  UNIQUE KEY `idservicios_UNIQUE` (`idServicio`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuxplanxrec`
+-- Dumping data for table `servicio`
 --
 
-LOCK TABLES `usuxplanxrec` WRITE;
-/*!40000 ALTER TABLE `usuxplanxrec` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuxplanxrec` ENABLE KEYS */;
+LOCK TABLES `servicio` WRITE;
+/*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
+INSERT INTO `servicio` VALUES (1,'Dieta','2 semana');
+/*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -58,8 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2015-02-25 14:03:34
-=======
 -- Dump completed on 2015-02-25 20:34:51
->>>>>>> c2b5a91ef514293361774d09a4065c5ef5fe0537

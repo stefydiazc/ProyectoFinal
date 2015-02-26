@@ -26,7 +26,6 @@ class Usuario
        $this->estatura = $estatura;
        $this->peso = $peso;
        $this->objetivo = $objetivo;
-       
      }
     
      function setIdUsuario($idUsuario){
@@ -95,7 +94,6 @@ class Usuario
      function getObjetivo(){
        return $this->objetivo;
      }  
-
 }
 
 ?> 
