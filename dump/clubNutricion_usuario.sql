@@ -28,18 +28,17 @@ CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) DEFAULT NULL,
   `apellido` varchar(45) DEFAULT NULL,
-  `educacion` varchar(45) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
   `contrasena` varchar(45) DEFAULT NULL,
-  `genero` int(11) DEFAULT NULL,
+  `genero` varchar(1) DEFAULT NULL,
   `actfisica` varchar(45) DEFAULT NULL,
   `edad` int(3) DEFAULT NULL,
   `estatura` double DEFAULT NULL,
-  `peso` int(11) DEFAULT NULL,
+  `peso` double DEFAULT NULL,
   `objetivo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idusuario`),
   UNIQUE KEY `idusuario_UNIQUE` (`idusuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,6 +47,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (11,'Stefany','Diaz C','stefy@gmail.com','23999923','f','l',25,1.99,99.9,'subir'),(12,'ojojg','nkij','kkdsj','12345','m','a',22,1.68,58.32,'mkdsjid'),(13,'Byron','Herrera','byfaherr@hotmail.com','1911','m','l',26,1,0,''),(14,'Gaby','Hojas','gaby@gmail.com','12345','f','a',24,1.54,0,''),(17,'fab','Da','a@gmail.com','1000','m','m',24,1.6,0,''),(18,'Natha','Monte','nata@gmail.com','99999','f','m',22,1.9,70.9,'bajar');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-19 13:26:03
+-- Dump completed on 2015-02-25 20:34:51
