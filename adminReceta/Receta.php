@@ -12,8 +12,11 @@ class Receta
        $this->idReceta = $idReceta;
        $this->nombre = $nombre;
        $this->descripcion = $descripcion;
+<<<<<<< HEAD
+=======
        $this->informacionnutricional = $informacionnutricional;
        $this->foto = $foto;
+>>>>>>> c2b5a91ef514293361774d09a4065c5ef5fe0537
      }
     
      function setIdReceta($idReceta){
