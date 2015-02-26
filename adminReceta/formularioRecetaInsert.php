@@ -7,9 +7,10 @@
 <body>
 <form action="insert.php" method="post" >
 <p>
-Nombre: <input type="text" name="nombre" autofocus required />
-Descripcion: <input type="text" name="descripcion" autofocus required />
-Informacion Nutricional: <input type="text" name="informacionnutricional" autofocus required />
+
+Nombre: <input type="text" name="nombre" autofocus required /></br>
+Descripcion: <input type="text" name="descripcion" autofocus required /></br>
+Informacion Nutricional: <input type="text" name="informacionnutricional" autofocus required /></br>
 Foto: <input type="text" name="foto" autofocus required />
 
 </p>

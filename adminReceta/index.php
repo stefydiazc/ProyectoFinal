@@ -10,15 +10,15 @@ $RecetaCollectorObj = new RecetaCollector();
 <table>
 <tr><td><a href="formularioRecetaInsert.php">Nueva Receta</a></td></tr>
 <tr>
-<td><strong>Id Receta</strong></td>
+<td><strong>IdReceta</strong></td>
 <td><strong>Nombre</strong></td>
 <td><strong>Descripci&oacute;n</strong></td>
-<td><strong>Informacion Nutricional</strong></td>
+<td><strong>InformacionNutricional</strong></td>
 <td><strong>Foto</strong></td>
 <tr>	
 <?php
 foreach ($RecetaCollectorObj->readRecetas() as $ObjReceta){
-	//print_r($r);
+	print_r($ObjReceta);
   echo "<tr>";
   echo "<td>".$ObjReceta->getIdReceta() ."</td>";
   echo "<td>".$ObjReceta->getNombre() ."</td>";

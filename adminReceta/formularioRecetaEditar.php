@@ -8,17 +8,18 @@
 
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP
-$id=$_GET["id"];
+$idReceta=$_GET["idReceta"];
 //$id=1000;
 include_once("RecetaCollector.php");
 include_once("Receta.php");
 $RecetaCollectorObj = new RecetaCollector();
-$ObjReceta = $RecetaCollectorObj->showReceta($getIdReceta);
+$ObjReceta = $RecetaCollectorObj->showReceta($IdReceta);
+
 ?>
 <h2> Editar Receta </h2>
 <form action="editar.php" method="post" >
 <p>
-Id Receta: <input type="text" name="idreceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
+Id Receta: <input type="text" name="idReceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
 </p>
 
 <p>
