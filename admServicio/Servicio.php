@@ -4,7 +4,6 @@ class Servicio
 {
     private $idServicio;
     private $nombre;
-    private $apellido;
     private $descripcion;
 
     

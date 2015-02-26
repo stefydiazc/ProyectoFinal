@@ -8,8 +8,7 @@
 
 //print_r($_POST);
 
-
-$idUsuario=$_POST["idUsuario"];
+$idServicio=$_POST["idServicio"];
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];
 
@@ -17,7 +16,7 @@ echo "Edici&oacute;n en proceso ....  </br>";
 
 include_once("ServicioCollector.php");
 $ServicioCollectorObj = new ServicioCollector();
-$ServicioCollectorObj->updateServicio($idUsuario,$nombre, $descripcion);
+$ServicioCollectorObj->updateServicio($idServicio,$nombre, $descripcion);
 
 echo "id :".$idServicio." actualizado a:".$nombre." </br>";
 ?>

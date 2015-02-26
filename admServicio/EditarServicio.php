@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Editar los Servicios</title>
+<title>Editar Servicios</title>
 </head>
 <body>
 
 <?php
 $idServicio=$_GET["idServicio"];
-//echo "xxxxxxx".$idUsuario;
+//echo "xxxxxxx".$idServicio;
 //$id=11;
 include_once("ServicioCollector.php");
 include_once("Servicio.php");
 $ServicioCollectorObj = new ServicioCollector();
 $ObjServicio = $ServicioCollectorObj->showServicio($idServicio);
 
-//print_r($ObjServicio);
+print_r($ObjServicio);
 ?>
 <h1>Editar Objeto Servicio </h1>
 <form action="editar.php" method="post" >
