@@ -7,14 +7,15 @@ class ServicioCollector extends Collector
 {
   
   function showServicio($idServicio) {
-    $row = self::$db->getRows("SELECT * FROM servicio where idServicio= ? ", array("{$idServicio}")); 
-    $ObjServicio = new Usuario($row[0]{'idServicio'},$row[0]{'nombre'},$row[0]{'descripcion'});
+    $row = self::$db->getRows("SELECT * FROM servicio where idservicio= ? ", array("{$idServicio}")); 
+    $ObjServicio = new Servicio($row[0]{'idServicio'},$row[0]{'nombre'},$row[0]{'descripcion'});
     return $ObjServicio;
   }
 
   function createServicio($nombre, $descripcion) {    
     $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.servicio (idServicio, nombre, descripcion)
-                                      VALUES (?, ?, ?, ?)", array(null, "{$nombre}", "{$descripcion}"));
+                                      VALUES (?, ?, ?)", array(null, "{$nombre}", "{$descripcion}"));
+
   }  
 
   function readServicios() {
@@ -27,10 +28,10 @@ class ServicioCollector extends Collector
     }
       //print_r($arrayUsuario);
     
-    return $arrayUsuario;        
+    return $arrayServicio;        
   }
   
-  function updateServicio($idServicio, $nombre, $apellido) {
+  function updateServicio($idServicio, $nombre, $descripcion) {
 
    // echo "$idServicio. $nombre. $descripcion;
     $insertrow = self::$db->updateRow("UPDATE clubNutricion.servicio SET servicio.nombre = ?, servicio.descripcion = ? 

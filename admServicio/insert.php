@@ -11,7 +11,8 @@ $descripcion = $_POST ['descripcion'];
 //echo $peso."</br>";
 //echo $objetivo."</br>";
 //$valor="manuel";
-echo 'Hola ' . htmlspecialchars($nombre)."  ". htmlspecialchars($descripcion) . '.';
+echo "<h3>Servicio Agregado </h3>";
+echo 'Servicio :  ' . htmlspecialchars($nombre)." .";
 
 
 include_once("ServicioCollector.php");
@@ -19,7 +20,7 @@ include_once("ServicioCollector.php");
 $ServicioCollectorObj = new ServicioCollector();
 $ServicioCollectorObj->createServicio($nombre, $descripcion);
 echo "</br>";
-echo "Servicio Agregado </br>";
+echo "</br>";
 ?>
 <div><a href="servicio-admin.php">Volver al Inicio</a></div>
 </div>
