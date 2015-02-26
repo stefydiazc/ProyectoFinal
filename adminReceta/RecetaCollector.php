@@ -6,7 +6,7 @@ include_once('Collector.php');
 class RecetaCollector extends Collector
 {
   
-  function showReceta($id) {
+  function showReceta($idReceta) {
     $row = self::$db->getRows("SELECT * FROM receta where idreceta= ? ", array("{$idreceta}")); 
     $ObjReceta = new Receta($row[0]{'idreceta'},$row[0]{'nombre'}, $row[0]{'descripcion'}, $row[0]{'informacionnutricional'}, $row[0]{'foto'});
     return $ObjReceta;
@@ -37,8 +37,8 @@ class RecetaCollector extends Collector
       WHERE receta.idreceta = ? ", array( "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}",$id));
   }  
 
-  function deleteReceta($id) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.receta WHERE idreceta= ?", array("{$id}"));
+  function deleteReceta($idReceta) {    
+    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.receta WHERE idreceta= ?", array("{$idReceta}"));
   }  
 }
 ?>
