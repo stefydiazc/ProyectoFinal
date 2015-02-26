@@ -18,7 +18,7 @@ $RecetaCollectorObj = new RecetaCollector();
 <tr>	
 <?php
 foreach ($RecetaCollectorObj->readRecetas() as $ObjReceta){
-	//print_r($ObjReceta);
+	print_r($ObjReceta);
   echo "<tr>";
   echo "<td>".$ObjReceta->getIdReceta() ."</td>";
   echo "<td>".$ObjReceta->getNombre() ."</td>";
@@ -28,10 +28,12 @@ foreach ($RecetaCollectorObj->readRecetas() as $ObjReceta){
 
 
   echo "<td><a href='formularioRecetaEditar.php?IdReceta".$ObjReceta->getIdReceta()."'>editar</a></td>";
-  echo "<td><a href='eliminar.php?id=".$ObjReceta->getIdReceta()."'>eliminar</a></td>"; 
+  echo "<td><a href='eliminar.php?Id=".$ObjReceta->getIdReceta()."'>eliminar</a></td>"; 
   echo "</tr>"; 
 }
 ?>
+
+<tr><td colspan='11'><a href='../administracion.php'>Regresar a Perfil de Administrador</a></td></tr>
 </table>
 </div>
 </body>
