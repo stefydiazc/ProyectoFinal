@@ -5,16 +5,19 @@
 <body>
 <div id="main">
 <?php
+print_r($_POST);
+
 $idReceta=$_POST["idReceta"];
-$idPlato=$_POST["idPlato"];
 $nombre=$_POST["nombre"];
 $descripcion=$_POST["descripcion"];
+$informacionnutricional=$_POST["informacionnutricional"];
+$foto=$_POST["foto"];
 
 echo "Edici&oacute;n en proceso ....  </br>";
 
 include_once("RecetaCollector.php");
 $RecetaCollectorObj = new RecetaCollector();
-$RecetaCollectorObj->updateReceta($idReceta,$idPlato;$nombre,$descripcion);
+$RecetaCollectorObj->updateReceta($idReceta, $nombre, $descripcion, $informacionnutricional, $foto);
 
 echo "id :".$idReceta." actualizado a:".$nombre." </br>";
 ?>
