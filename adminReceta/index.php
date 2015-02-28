@@ -27,8 +27,8 @@ foreach ($RecetaCollectorObj->readRecetas() as $ObjReceta){
   echo "<td>".$ObjReceta->getFoto()."</td>";
 
 
-  echo "<td><a href='formularioRecetaEditar.php?IdReceta".$ObjReceta->getIdReceta()."'>editar</a></td>";
-  echo "<td><a href='eliminar.php?IdReceta=".$ObjReceta->getIdReceta()."'>eliminar</a></td>"; 
+  echo "<td><a href='formularioRecetaEditar.php?IdReceta".$ObjReceta->getIdReceta()."'> Editar </a></td>";
+  echo "<td><a href='eliminar.php?IdReceta=".$ObjReceta->getIdReceta()."'> Eliminar </a></td>"; 
   echo "</tr>"; 
 }
 ?>

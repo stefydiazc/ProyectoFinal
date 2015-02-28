@@ -5,8 +5,10 @@
 <body>
 <div id="main">
 <?php
+
 print_r($_POST);
-$idReceta = $_POST ['idReceta'];
+
+$idReceta = $_POST ["idReceta"];
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];
 $informacionnutricional = $_POST ['informacionnutricional'];
