@@ -1,0 +1,144 @@
+<?php
+	//session_start();
+
+	//if(empty($_SESSION['usuario']))
+	//{
+		//header('Location: sesion.html');
+	}
+	
+	//$conexion = mysql_connect('68.178.136.89', 'redfenix', 'Redfenix@1');
+	//mysql_select_db('redfenix', $conexion);
+	//$sql = "SELECT id, nombre, identificacion FROM CLIENTE WHERE estado = 1 ORDER BY nombre ASC";
+	//$resultado = mysql_query($sql);
+	//mysql_close($conexion);
+?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RedFenix</title>
+    <link href="css/general.css" rel="stylesheet" type="text/css"/>
+    <link href="css/clientes.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/jquery.fancybox.css" media="screen" />
+    <script src="lib/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/fancybox/jquery.mousewheel.pack.js" type="text/javascript"></script>
+    <script src="lib/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="js/centrar.js" type="text/javascript"></script>
+    <script src="js/clientes.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="separador"></div>
+<div id="contenedor">
+    <nav>
+        <? 
+		if($_SESSION['acceso_usuario'] == 1)
+		{ ?>
+        <div onClick="location.href='usuarios.php'">Usuarios</div>
+        <? }
+		if($_SESSION['acceso_cliente'] == 1)
+		{ ?>
+        <div onClick="location.href='clientes.php'">Clientes</div>
+		<? }
+		if($_SESSION['acceso_pauta'] == 1)
+		{ ?>
+        <div onClick="location.href='pautas.php'">Pautas</div>
+        <? }
+		if($_SESSION['acceso_consulta'] == 1)
+		{ ?>
+        <div>Consultas</div>
+        <? }?>
+        <div onClick="location.href='php/cerrar_sesion.php'">Cerrar Sesión</div>
+    </nav>
+    <section>
+        <header>
+            <button id="btnNuevo" href='#popup'>Nuevo cliente</button>
+        </header>
+        <table id="tabla_cabecera">
+            <tr>
+                <td class="numeracion">NO.</td>
+                <td class="nombre">NOMBRE</td>
+                <td class="identificacion">C.I./R.U.C.</td>
+            </tr>
+        </table>
+        <article>
+            <table id="tabla_contenido">
+                <?php 
+					$cont = 1;
+					
+					while($cliente = mysql_fetch_array($resultado))
+					{
+				?>
+                <tr>
+                    <td class="numeracion"><?php echo $cont ?></td>
+                    <td class="nombre"><?php echo $cliente['nombre'] ?></td>
+                    <td class="identificacion"><?php echo $cliente['identificacion'] ?></td>
+                    <td class="botones">
+                        <button class="cliente_botones" onClick="editar(<?php echo $cliente['id'] ?>)">Editar</button>
+                        <button class="cliente_botones" onClick="eliminar(<?php echo $cliente['id'] ?>)">Eliminar</button>
+                    </td>
+                </tr>
+                <?php
+						$cont++;
+                	}
+               	?>
+            </table>
+        </article>
+ 	</section>
+</div>
+<div style="display: none">
+	<div id="popup">
+  		<header>CLIENTES</header>
+    	<form id="frmCliente">
+        	<table>
+            	<tr>
+                	<td>Nombre/Razon Social</td>
+                	<td class="caja_texto"><input id="nombre" name="nombre" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>C.I./R.U.C.</td>
+                	<td class="caja_texto"><input id="identificacion" name="identificacion" type="text" maxlength="13" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Dirección</td>
+                	<td class="caja_texto"><input id="direccion" name="direccion" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>E-mail</td>
+                	<td class="caja_texto"><input id="correo" name="correo" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Teléfono</td>
+                	<td class="caja_texto"><input id="telefono" name="telefono" type="text" maxlength="10" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Facebook</td>
+                	<td class="caja_texto"><input id="facebook" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Twitter</td>
+                	<td class="caja_texto"><input id="twitter" name="twitter" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>GooglePlus</td>
+                	<td class="caja_texto"><input id="google" name="google" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Instagram</td>
+                	<td class="caja_texto"><input id="instagram" name="instagram" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td>Youtube</td>
+                	<td class="caja_texto"><input id="youtube" name="youtube" type="text" autocomplete="off"/></td>
+              	</tr>
+              	<tr>
+                	<td></td>
+                	<td id="contenedor_boton">
+                   		<button type="submit">Guardar</button>
+                    </td>
+              	</tr>
+            </table>
+        </form>
+	</div>
+</div>
+</body>
+</html>

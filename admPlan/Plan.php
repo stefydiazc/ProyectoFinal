@@ -9,8 +9,8 @@ class Plan
     private $precio;
 
     
-     function __construct($idPlan, $nombre, $descripcion, idServicio, precio) {
-       $this->idServicio = $idServicio;
+     function __construct($idPlan, $nombre, $descripcion, $idServicio, $precio) {
+       $this->idPlan = $idPlan;
        $this->nombre = $nombre;
        $this->descripcion = $descripcion;
        $this->idServicio = $idServicio;

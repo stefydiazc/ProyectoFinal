@@ -2,35 +2,39 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Editar Servicios</title>
+<title>Editar Plan</title>
 </head>
 <body>
 
 <?php
-$idServicio=$_GET["idServicio"];
+$idPlan=$_GET["idPlan"];
 //echo "xxxxxxx".$idServicio;
 //$id=11;
-include_once("ServicioCollector.php");
-include_once("Servicio.php");
-$ServicioCollectorObj = new ServicioCollector();
-$ObjServicio = $ServicioCollectorObj->showServicio($idServicio);
+include_once("PlanCollector.php");
+include_once("Plan.php");
+$PlanCollectorObj = new PlanCollector();
+$ObjPlan = $PlanCollectorObj->showPlan($idPlan);
 
-print_r($ObjServicio);
+print_r($ObjPlan);
 ?>
-<h1>Editar Objeto Servicio </h1>
+<h1>Editar Objeto Plan </h1>
 <form action="editar.php" method="post" >
 <p>
-Id: <input type="text" name="idServicio" value="<?php echo $ObjServicio->getIdServicio(); ?>" readonly />
+Id: <input type="text" name="idPlan" value="<?php echo $ObjPlan->getIdPlan(); ?>" readonly />
 </p>
 <p>
-Nombre: <input type="text" name="nombre"  value="<?php echo $ObjServicio->getNombre(); ?>" autofocus required />
+Nombre: <input type="text" name="nombre"  value="<?php echo $ObjPlan->getNombre(); ?>" autofocus required />
 </p>
 <p>
-Descripcion: <input type="text" name="descripcion" value="<?php echo $ObjServicio->getDescripcion(); ?>" autofocus required /></br>
+Descripcion: <input type="text" name="descripcion" value="<?php echo $ObjPlan->getDescripcion(); ?>" autofocus required /></br>
 </p>
-
-
-<a href="servicio-admin.php">Cancelar</a>
+<p>
+Id Servicio: <input type="text" name="idServicio" value="<?php echo $ObjPlan->getIdServicio(); ?>" autofocus required/>
+</p>
+<p>
+Precio: <input type="text" name="precio" value="<?php echo $ObjPlan->getPrecio(); ?>" autofocus required />
+</p>
+<a href="plan-admin.php">Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>

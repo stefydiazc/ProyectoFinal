@@ -6,19 +6,19 @@
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP
-$idPlan=$_GET["idPlan"];
+$idServicio=$_GET["idServicio"];
 
 //incluir la libreria de DemoCollector
-include_once("PlanCollector.php");
+include_once("ServicioCollector.php");
 //creo una instancia de DemoCollector
-$PlanCollectorObj = new PlanCollector();
+$ServicioCollectorObj = new ServicioCollector();
 //Ejecuto el metodo para eliminar el objeto Demo indicando el id
-$PlanCollectorObj->deletePlan($idPlan);
+$ServicioCollectorObj->deleteServicio($idServicio);
 
 // muestro mensaje de que se ha eliminado el objeto Demo
-echo "El Plan con el id ". htmlspecialchars($idPlan) ."  ha sido eliminado correctamente.";
+echo "El Servicio con el id ". htmlspecialchars($idServicio) ."  ha sido eliminado correctamente.";
 ?>
-<div><a href="plan-admin.php">Volver al Inicio</a></div>
+<div><a href="servicio-admin.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

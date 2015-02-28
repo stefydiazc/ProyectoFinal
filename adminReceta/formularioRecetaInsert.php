@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>formulario Receta</title>
+<title>Formulario Receta</title>
 </head>
 <body>
 <form action="insert.php" method="post" >
@@ -14,6 +14,6 @@ Informacion Nutricional: <input type="text" name="informacionnutricional" autofo
 Foto: <input type="text" name="foto" autofocus required />
 
 </p>
-<input type="submit" value="Submit!" />
+<input type="submit" value="Guardar" />
 
 </form>

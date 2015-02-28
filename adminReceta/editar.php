@@ -5,13 +5,14 @@
 <body>
 <div id="main">
 <?php
+
 print_r($_POST);
 
-$idReceta = $_POST["idReceta"];
-$nombre = $_POST["nombre"];
-$descripcion = $_POST["descripcion"];
-$informacionnutricional = $_POST["informacionnutricional"];
-$foto = $_POST["foto"];
+$idReceta = $_POST ["idReceta"];
+$nombre = $_POST ['nombre'];
+$descripcion = $_POST ['descripcion'];
+$informacionnutricional = $_POST ['informacionnutricional'];
+$foto = $_POST ['foto'];
 
 echo "Edici&oacute;n en proceso ....  </br>";
 
