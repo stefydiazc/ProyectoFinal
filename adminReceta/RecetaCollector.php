@@ -8,8 +8,8 @@ class RecetaCollector extends Collector
   
   function showReceta($idReceta) {
     $row = self::$db->getRows("SELECT * FROM receta where idreceta= ? ", array("{$idReceta}")); 
-    $ObjReceta = new Receta($row[0]{'idreceta'},$row[0]{'nombre'}, $row[0]{'descripcion'}, 
-                            $row[0]{'informacionnutricional'}, $row[0]{'foto'});
+    $ObjReceta = new Receta($row[0]{'idreceta'},$row[0]{'nombre'},$row[0]{'descripcion'},
+                  $row[0]{'informacionnutricional'}, $row[0]{'foto'});
     return $ObjReceta;
   }
 
