@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
  
@@ -41,11 +46,11 @@
                       <form role="form" action="" method="post" class="validateIt" data-show-errors="true" data-hide-form="false">
                           <div class="form-group">
                               <label for="email">Correo Electr&oacute;nico</label>
-                              <input type="email" class="form-control" id="email" name="email" required>
+                              <input type="email" class="form-control" id="email" name="email" autofocus required>
                           </div>
                           <div class="form-group">
                               <label for="password">Contrase&ntilde;a</label>
-                              <input type="password" class="form-control" id="password" name="password" >
+                              <input type="password" class="form-control" id="password" name="password" autofocus required >
                           </div>
 	                          
                           	<!--<input type="submit" name="iniciar_sesion" class="btn btn-primary pull-left" value="Entrar">-->

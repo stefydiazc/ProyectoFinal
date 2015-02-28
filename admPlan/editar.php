@@ -8,19 +8,21 @@
 
 //print_r($_POST);
 
-$idServicio=$_POST["idServicio"];
+$idPlan=$_POST["idPlan"];
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];
+$idServicio=$_POST["idServicio"];
+$precio=$_POST["precio"];
 
 echo "Edici&oacute;n en proceso ....  </br>";
 
-include_once("ServicioCollector.php");
-$ServicioCollectorObj = new ServicioCollector();
-$ServicioCollectorObj->updateServicio($idServicio,$nombre, $descripcion);
+include_once("PlanCollector.php");
+$PlanCollectorObj = new PlanCollector();
+$PlanCollectorObj->updatePlan($idPlan, $nombre, $descripcion, $idServicio, $precio);
 
-echo "id :".$idServicio." actualizado a:".$nombre." </br>";
+echo "id :".$idPlan." actualizado a:".$nombre." </br>";
 ?>
-<div><a href="servicio-admin.php">Volver al Inicio</a></div>
+<div><a href="plan-admin.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

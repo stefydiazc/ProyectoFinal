@@ -1,7 +1,7 @@
 <?php
 
 include_once('Receta.php');
-include_once('../config/Collector.php');
+include_once('Collector.php');
 
 class RecetaCollector extends Collector
 {

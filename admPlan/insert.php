@@ -7,22 +7,24 @@
 <?php
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];
+$idServicio = $_POST ['idServicio'];
+$precio = $_POST ['precio'];
 
 //echo $peso."</br>";
 //echo $objetivo."</br>";
 //$valor="manuel";
-echo "<h3>Servicio Agregado </h3>";
-echo 'Servicio :  ' . htmlspecialchars($nombre)." .";
+echo 'Hola ' . htmlspecialchars($nombre);
 
 
-include_once("ServicioCollector.php");
+include_once("PlanCollector.php");
 
-$ServicioCollectorObj = new ServicioCollector();
-$ServicioCollectorObj->createServicio($nombre, $descripcion);
+$PlanCollectorObj = new PlanCollector();
+$PlanCollectorObj->createPlan($nombre, $descripcion, $idServicio, $precio);
+
 echo "</br>";
-echo "</br>";
+echo "Plan Agregado </br>";
 ?>
-<div><a href="servicio-admin.php">Volver al Inicio</a></div>
+<div><a href="plan-admin.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>

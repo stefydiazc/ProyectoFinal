@@ -22,10 +22,10 @@
         <li><a href="login.php"><i class="service-icon fa fa-male"></i>&nbsp;Login</a></li>
         <li><a href="index.php#contact"><i class="service-icon fa fa-envelope"></i>&nbsp;Cont&aacute;ctanos</a></li>
         <form class="navbar-form navbar-right" role="search">
-                                <div class="form-group">
+                              <!--  <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Buscar">
                                 </div>
-                                    <button type="submit" class="btn btn-default">Buscar</button>
+                                    <button type="submit" class="btn btn-default">Buscar</button>-->
                           </form>
     </ul>
   </div><!-- /.navbar-collapse -->
