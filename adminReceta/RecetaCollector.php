@@ -34,7 +34,7 @@ class RecetaCollector extends Collector
   function updateReceta($idReceta, $nombre, $descripcion, $informacionnutricional, $foto) {    
     echo "$idReceta. $nombre. $descripcion. $informacionnutricional. $foto";
     $insertrow = self::$db->updateRow("UPDATE clubNutricion.receta SET receta.nombre = ?, receta.descripcion = ?, receta.informacionnutricional = ?, receta.foto = ?,
-      WHERE receta.idreceta = ? ", array( "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}",$id));
+      WHERE receta.idreceta = ? ", array( "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}",$idReceta));
   }  
 
   function deleteReceta($idReceta) {    
