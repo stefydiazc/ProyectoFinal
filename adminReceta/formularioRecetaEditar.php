@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Formulario Receta</title>
+<title>Editar Receta</title>
 </head>
 <body>
 
@@ -15,11 +15,13 @@ include_once("Receta.php");
 $RecetaCollectorObj = new RecetaCollector();
 $ObjReceta = $RecetaCollectorObj->showReceta($IdReceta);
 
+print_r(ObjReceta);
+
 ?>
 <h2> Editar Receta </h2>
 <form action="editar.php" method="post" >
 <p>
-Id Receta: <input type="text" name="idReceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
+Id: <input type="text" name="idReceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />
 </p>
 
 <p>

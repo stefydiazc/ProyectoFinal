@@ -7,12 +7,13 @@ class RecetaCollector extends Collector
 {
   
   function showReceta($idReceta) {
-    $row = self::$db->getRows("SELECT * FROM receta where idreceta= ? ", array("{$idreceta}")); 
-    $ObjReceta = new Receta($row[0]{'idreceta'},$row[0]{'nombre'}, $row[0]{'descripcion'}, $row[0]{'informacionnutricional'}, $row[0]{'foto'});
+    $row = self::$db->getRows("SELECT * FROM receta where idreceta= ? ", array("{$idReceta}")); 
+    $ObjReceta = new Receta($row[0]{'idreceta'},$row[0]{'nombre'}, $row[0]{'descripcion'}, 
+                            $row[0]{'informacionnutricional'}, $row[0]{'foto'});
     return $ObjReceta;
   }
 
-  function createReceta($idReceta, $nombre, $descripcion, $informacionnutricional, $foto) {    
+  function createReceta($nombre, $descripcion, $informacionnutricional, $foto) {    
     $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.receta 
                                       (idreceta, nombre, descripcion, informacionnutricional, foto) VALUES (?, ?, ?, ?, ?)",
                                        array(null, "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}"));
@@ -34,7 +35,7 @@ class RecetaCollector extends Collector
   function updateReceta($idReceta, $nombre, $descripcion, $informacionnutricional, $foto) {    
     echo "$idReceta. $nombre. $descripcion. $informacionnutricional. $foto";
     $insertrow = self::$db->updateRow("UPDATE clubNutricion.receta SET receta.nombre = ?, receta.descripcion = ?, receta.informacionnutricional = ?, receta.foto = ?,
-      WHERE receta.idreceta = ? ", array( "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}",$id));
+      WHERE receta.idreceta = ? ", array( "{$nombre}","{$descripcion}","{$informacionnutricional}","{$foto}",$idReceta));
   }  
 
   function deleteReceta($idReceta) {    
