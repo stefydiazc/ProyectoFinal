@@ -8,6 +8,7 @@ class Receta
     private $informacionnutricional;
     private $foto;
     
+    
      function __construct($idReceta, $nombre, $descripcion, $informacionnutricional, $foto) {
        $this->idReceta = $idReceta;
        $this->nombre = $nombre;
@@ -21,8 +22,7 @@ class Receta
      } 
      function getIdReceta(){
        return $this->idReceta;
-     }
-     
+     } 
      function setNombre($nombre){
        $this->nombre = $nombre;
      } 
@@ -40,13 +40,14 @@ class Receta
      } 
      function getInformacionnutricional(){
        return $this->informacionnutricional;
-     }  
+     } 
      function setFoto($foto){
        $this->foto = $foto;
      } 
      function getFoto(){
        return $this->foto;
-     }  
+     } 
+     
 }
 
 ?> 

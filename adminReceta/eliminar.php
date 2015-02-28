@@ -16,9 +16,9 @@ $RecetaCollectorObj = new RecetaCollector();
 $RecetaCollectorObj->deleteReceta($idReceta);
 
 // muestro mensaje de que se ha eliminado el objeto Demo
-echo "La receta con el id". htmlspecialchars($idReceta) ."  ha sido eliminada correctamente.";
+echo "La receta con el id". htmlspecialchars($idReceta) ."  ha sido eliminado correctamente.";
 ?>
-<div><a href="index.php">Volver al Inicio</a></div>
+<div><a href="receta-admin.php">Volver al Inicio</a></div>
 </div>
 </body>
 </html>
