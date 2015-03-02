@@ -18,7 +18,7 @@ include_once("Usuario.php");
 $UsuarioCollectorObj = new UsuarioCollector();
 $ObjUsuario = $UsuarioCollectorObj->showUsuario($idUsuario);
 
-print_r($ObjUsuario);
+//print_r($ObjUsuario);
 ?>
 <h2>Editar Objeto Usuario </h2>
 <form action="editar.php" method="post" >

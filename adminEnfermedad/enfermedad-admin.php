@@ -1,0 +1,35 @@
+<html>
+<?php include 'headEnfermedad.php';?>
+<?php
+include_once("EnfermedadCollector.php");
+$EnfermedadCollectorObj = new EnfermedadCollector();
+?>
+<body>
+<?php include 'menuEnfermedad.php';?>
+<div id="main">
+<table>
+<h1>Enfermedad</h1>	
+<tr><td><a href="nuevoEnfermedad.php">Nuevo Enfermedad</a></td></tr>
+<tr>
+<td><strong>Id</strong></td>
+<td><strong>Nombre</strong></td>
+</tr>
+
+<?php
+foreach ($EnfermedadCollectorObj->readEnfermedades() as $c){
+ //print_r($c);
+  echo "<tr>";
+  echo "<td>".$c->getIdEnfermedad() ."</td>";
+  echo "<td>".$c->getNombre()."</td>";
+  
+  echo "<td><a href='EditarEnfermedad.php?idEnfermedad=".$c->getIdEnfermedad()."'> Editar</a></td>";
+
+  echo "<td><a href='eliminar.php?idEnfermedad=".$c->getIdEnfermedad()."'> Eliminar</a></td>"; 
+  echo "</tr>"; 
+}
+?>
+<tr><td colspan='11'><br><a href='../administracion.php'>Regresar a Perfil de Administrador</a></br></td></tr>
+</table>
+</div>
+</body>
+</html>
