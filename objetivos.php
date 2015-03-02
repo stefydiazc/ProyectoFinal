@@ -72,19 +72,6 @@
 </div>
 </div>    
        
-
-	<div class="container-fluid">
-    <div class="form-group">  
-    
-            <div class="col-lg-offset-7 col-lg-4">
-               
-            </div>
-     </div>   
-       </div>  
- 
-     
- </div>
-
  
 <br></br>
 <br></br>
