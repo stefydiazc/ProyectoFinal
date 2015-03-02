@@ -1,8 +1,10 @@
 <html>
-<head>
-</head>
+<?php include 'headPlan.php';?>
+
 
 <body>
+<?php include 'menuPlan.php';?>
+
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP

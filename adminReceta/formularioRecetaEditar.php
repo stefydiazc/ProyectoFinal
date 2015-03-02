@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php include 'headReceta.php';?>
 <meta charset="utf-8" />
 <title>Editar receta</title>
 </head>
 <body>
 
+<?php include 'menuReceta.php';?> 
 <?php
 $idReceta=$_GET["idReceta"];
 //echo "xxxxxxx".$idUsuario;
@@ -15,9 +17,9 @@ include_once("Receta.php");
 $RecetaCollectorObj = new RecetaCollector();
 $ObjReceta = $RecetaCollectorObj->showReceta($idReceta);
 
-print_r($ObjReceta);
+//print_r($ObjReceta);
 ?>
-<h2>Editar Objeto Receta </h2>
+<h1>Editar Receta </h1>
 <form action="editar.php" method="post" >
 <p>
 Id: <input type="text" name="idReceta" value="<?php echo $ObjReceta->getIdReceta(); ?>" readonly />

@@ -1,9 +1,9 @@
 <html>
-<head>
-</head>
+<?php include 'headServicio.php';?>
 
 <body>
 <div id="main">
+<?php include 'menuServicio.php';?>
 <?php
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];

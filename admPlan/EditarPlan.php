@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php include 'headPlan.php';?>
+
 <meta charset="utf-8" />
 <title>Editar Plan</title>
 </head>
 <body>
+<?php include 'menuPlan.php';?>
 
 <?php
 $idPlan=$_GET["idPlan"];

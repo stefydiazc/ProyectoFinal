@@ -1,13 +1,16 @@
 <html>
-<head>
-</head>
+<?php include 'headPlan.php';?>
+
 <?php
 include_once("PlanCollector.php");
 $PlanCollectorObj = new PlanCollector();
 ?>
 <body>
+<?php include 'menuPlan.php';?>
+
 <div id="main">
 <table>
+<h1>Plan</h1>
 <tr><td><a href="nuevoPlan.php">Nuevo</a></td></tr>
 <tr>
 <td><strong>Id</strong></td>

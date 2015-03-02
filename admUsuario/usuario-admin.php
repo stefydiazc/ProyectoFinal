@@ -1,13 +1,14 @@
 <html>
-<head>
-</head>
+<?php include 'headUsuario.php';?>
 <?php
 include_once("UsuarioCollector.php");
 $UsuarioCollectorObj = new UsuarioCollector();
 ?>
 <body>
+  <?php include 'menuUsuario.php';?>
 <div id="main">
 <table>
+<h1>Usuario</h1>
 <tr><td><a href="nuevoUsuario.php">Nuevo</a></td></tr>
 <tr>
 <td><strong>Id</strong></td>

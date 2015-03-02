@@ -1,32 +1,30 @@
 <html>
-<head>
-</head>
+<?php include 'headObjetivo.php';?>
 <?php
-include_once("ServicioCollector.php");
-$ServicioCollectorObj = new ServicioCollector();
+include_once("ObjetivoCollector.php");
+$ObjetivoCollectorObj = new ObjetivoCollector();
 ?>
 <body>
+<?php include 'menuObjetivo.php';?>
 <div id="main">
 <table>
-<tr><td><a href="nuevoServicio.php">Nuevo</a></td></tr>
+<h1>Objetivo</h1>	
+<tr><td><a href="nuevoObjetivo.php">Nuevo Objetivo</a></td></tr>
 <tr>
 <td><strong>Id</strong></td>
 <td><strong>Nombre</strong></td>
-<td><strong>Servicio</strong></td>
 </tr>
 
 <?php
-foreach ($ServicioCollectorObj->readServicios() as $c){
+foreach ($ObjetivoCollectorObj->readObjetivos() as $c){
  //print_r($c);
   echo "<tr>";
-  echo "<td>".$c->getIdServicio() ."</td>";
+  echo "<td>".$c->getIdObjetivo() ."</td>";
   echo "<td>".$c->getNombre()."</td>";
-  echo "<td>".$c->getDescripcion()."</td>";
+  
+  echo "<td><a href='EditarObjetivo.php?idObjetivo=".$c->getIdObjetivo()."'> Editar</a></td>";
 
-
-  echo "<td><a href='EditarServicio.php?idServicio=".$c->getIdServicio()."'> Editar</a></td>";
-
-  	echo "<td><a href='eliminar.php?idServicio=".$c->getIdServicio()."'> Eliminar</a></td>"; 
+  echo "<td><a href='eliminar.php?idObjetivo=".$c->getIdObjetivo()."'> Eliminar</a></td>"; 
   echo "</tr>"; 
 }
 ?>

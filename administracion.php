@@ -7,7 +7,7 @@
   
   
 <body>
-  
+ <?php include 'headAdm.php';?> 
  <?php include 'menuAdm.php';?>
 
 <title> Administraci&oacute;n </title>
@@ -27,11 +27,6 @@
 
 <p><a href="adminReceta/receta-admin.php" class=""> Recetas </a></p>
 
-<p><a href="adminUsuObjRec/usuobjrec-admin.php" class=""> Usuario - Objetivo - Recetas </a></p>
+<p><a href="adminEnfermedad/enfermedad-admin.php" class=""> Enfermedad </a></p>
 
 </center>
-
-
-
-</body>
-</html>

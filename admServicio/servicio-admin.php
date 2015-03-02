@@ -1,14 +1,15 @@
 <html>
-<head>
-</head>
+<?php include 'headServicio.php';?>
 <?php
 include_once("ServicioCollector.php");
 $ServicioCollectorObj = new ServicioCollector();
 ?>
 <body>
+<?php include 'menuServicio.php';?>
 <div id="main">
 <table>
-<tr><td><a href="nuevoServicio.php">Nuevo</a></td></tr>
+<h1>Servicios</h1>
+<tr><td><a href="nuevoServicio.php">Nuevo Servicio</a></td></tr>
 <tr>
 <td><strong>Id</strong></td>
 <td><strong>Nombre</strong></td>

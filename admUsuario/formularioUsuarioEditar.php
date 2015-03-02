@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<?php include 'headUsuario.php';?>
+
 <meta charset="utf-8" />
 <title>Editar usuario</title>
 </head>
 <body>
+<?php include 'menuUsuario.php';?>
 
 <?php
 $idUsuario=$_GET["idUsuario"];

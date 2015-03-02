@@ -1,54 +1,50 @@
 <?php
 
-include_once('Servicio.php');
+include_once('Objetivo.php');
 include_once('../config/Collector.php');
 
-class ServicioCollector extends Collector
+class ObjetivoCollector extends Collector
 {
   
-  function showServicio($idServicio) {
-    $row = self::$db->getRows("SELECT * FROM servicio where idservicio= ? ", array("{$idServicio}")); 
-    $ObjServicio = new Servicio($row[0]{'idServicio'},$row[0]{'nombre'},$row[0]{'descripcion'});
-    return $ObjServicio;
+  function showObjetivo($idObjetivo) {
+    $row = self::$db->getRows("SELECT * FROM objetivo where idobjetivo= ? ", array("{$idObjetivo}")); 
+    $ObjObjetivo = new Objetivo($row[0]{'idobjetivo'},$row[0]{'nombre'});
+    return $ObjObjetivo;
   }
 
-  function createServicio($nombre, $descripcion) { 
-   echo "$nombre.$descripcion";
-   $sql= "INSERT INTO clubNutricion.servicio (idServicio, nombre, descripcion) VALUES". 
-                                  "(null, '$nombre', '$descripcion')";   
-    echo $sql;
+  function createObjetivo($nombre) { 
+   //echo "$nombre";
+   $sql= "INSERT INTO clubNutricion.objetivo (idObjetivo, nombre) VALUES". 
+                                  "(null, '$nombre')";   
+    //echo $sql;
     $insertrow = self::$db->insertRow($sql);
     
   }  
    
 
-  function readServicios() {
-    $rows = self::$db->getRows("SELECT * FROM servicio ");        
-    $arrayServicio= array();        
+  function readObjetivos() {
+    $rows = self::$db->getRows("SELECT * FROM objetivo ");        
+    $arrayObjetivo= array();        
     foreach ($rows as $c){
       //print_r($c);
-      $aux = new Servicio($c{'idServicio'},$c{'nombre'}, $c{'descripcion'});
-      array_push($arrayServicio, $aux);
+      $aux = new Objetivo($c{'idobjetivo'},$c{'nombre'});
+      array_push($arrayObjetivo, $aux);
     }
       //print_r($arrayUsuario);
     
-    return $arrayServicio;        
+    return $arrayObjetivo;        
   }
   
-  function updateServicio($idServicio, $nombre, $descripcion) {
+  function updateObjetivo($idObjetivo, $nombre) {
 
    // echo "$idServicio. $nombre. $descripcion;
-    $insertrow = self::$db->updateRow("UPDATE clubNutricion.servicio SET servicio.nombre = ?, servicio.descripcion = ? 
-                                      WHERE servicio.idservicio = ? ", array("{$nombre}", "{$descripcion}",$idServicio));
+    $insertrow = self::$db->updateRow("UPDATE clubNutricion.objetivo SET objetivo.nombre = ? 
+                                      WHERE objetivo.idobjetivo = ? ", array("{$nombre}",$idObjetivo));
   }  
 
-  function deleteServicio($idServicio) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.servicio WHERE idservicio= ?", array("{$idServicio}"));
+  function deleteObjetivo($idObjetivo) {    
+    $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.objetivo WHERE idobjetivo= ?", array("{$idObjetivo}"));
   }  
-
-
-
-
 }
 ?>
 

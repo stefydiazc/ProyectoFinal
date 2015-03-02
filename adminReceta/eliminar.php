@@ -1,8 +1,8 @@
 <html>
-<head>
-</head>
+<?php include 'headReceta.php';?> 
 
 <body>
+	<?php include 'menuReceta.php';?> 
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP

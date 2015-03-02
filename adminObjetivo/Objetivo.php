@@ -1,35 +1,29 @@
 <?php
 
-class Servicio
+class Objetivo
 {
-    private $idServicio;
+    private $idObjetivo;
     private $nombre;
-    private $descripcion;
+    
 
     
-     function __construct($idServicio, $nombre, $descripcion) {
-       $this->idServicio = $idServicio;
+     function __construct($idObjetivo, $nombre) {
+       $this->idObjetivo = $idObjetivo;
        $this->nombre = $nombre;
-       $this->descripcion = $descripcion;
+       
      }
     
-     function setIdServicio($idServicio){
-       $this->idServicio = $idServicio;
+     function setIdObjetivo($idObjetivo){
+       $this->idObjetivo = $idObjetivo;
      } 
-     function getIdServicio(){
-       return $this->idServicio;
+     function getIdObjetivo(){
+       return $this->idObjetivo;
      } 
      function setNombre($nombre){
        $this->nombre = $nombre;
      } 
      function getNombre(){
        return $this->nombre;
-     } 
-     function setDescripcion($descripcion){
-       $this->descripcion = $descripcion;
-     } 
-     function getDescripcion(){
-       return $this->descripcion;
      } 
      
 }

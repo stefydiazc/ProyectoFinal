@@ -1,8 +1,10 @@
 <html>
-<head>
-</head>
+<?php include 'headReceta.php';?> 
+
 
 <body>
+<?php include 'menuReceta.php';?> 
+
 <div id="main">
 <?php
 $nombre = $_POST ['nombre'];

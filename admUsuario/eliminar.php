@@ -1,8 +1,10 @@
 <html>
-<head>
-</head>
+<?php include 'headUsuario.php';?>
+
 
 <body>
+<?php include 'menuUsuario.php';?>
+
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP

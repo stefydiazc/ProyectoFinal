@@ -1,8 +1,10 @@
 <html>
-<head>
-</head>
+<?php include 'headUsuario.php';?>
+
 
 <body>
+<?php include 'menuUsuario.php';?>
+
 <div id="main">
 <?php
 
