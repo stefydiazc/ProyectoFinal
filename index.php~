@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
  
@@ -440,7 +441,7 @@
 						    <div class="form-group">
 						      <label class="col-sm-2 control-label" for="message">Mensaje</label>
 						      <div class="col-sm-9">
-						        <textarea placeholder="Por favor escriba su mensaje " class="form-control" name="message" id="message" rows="3"></textarea>
+						        <textarea placeholder="Por favor escriba su mensaje " class="form-control" name="message_field" id="message" rows="3"></textarea>
 						      </div>
 						    </div>
 	              <div class="col-sm-offset-4 col-sm-8">

@@ -29,30 +29,24 @@
                                 Informaci&oacute;n Nutricional
                             </a>
                         </li>
+                        
                         <li class="">
-                            <a href="gustos.php">
-                                <span class="service-icon fa  fa-apple"></span>
-                                Gustos
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="alergias.php">
-                                <span class="service-icon fa fa-check-square-o"></span>
-                                Alergias
+                            <a href="logout.php">
+                                <span class="service-icon fa fa-power-off"></span>
+                                Cerrar Sesi&oacute;n
                             </a>
                        
                               </li>
                     </ul>
                 </div>
      </div><!-- <div class="container-fluid"> -->
-    <br></br>
+
 <!---///////////////////////////////////////////////////////////////////////////////////-->
 
 
 <div class="border-box  text-center">
 <div class="col-lg-6">
-            
-     			<h2 >Ayudan&oacute;s a conocerte    </h2>     		   
+    <h2 class="service-icon fa fa-book">  Ay&uacute;danos a conocerte    </h2>     		   
  	</div>
  </div> 	
             <br>
@@ -62,79 +56,65 @@
             <form action="contact" id="contact-form" class="form-horizontal">
   			<div class="form-group">
 				<div class="col-lg-12 col-lg-14">
-					<label class="col-lg-3 control-label" for="name">Sexo *:</label>
+					<label class="col-lg-3 control-label" for="name">G&eacute;nero *:</label>
 						<div class="col-lg-4">
-                        <label class="checkbox-inline">
-  <input type="checkbox" id="inlineCheckbox1" value="option1"> <span class="service-icon fa fa-male"></span>
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox"  id="inlineCheckbox1"  value="option2">  <span class="service-icon fa fa-female"></span></label>
+                  <input type="radio" name="genero" value="m"> <span class="service-icon fa fa-male"></span>Masculino</br>
+                  <input type="radio" name="genero" value="f"><span class="service-icon fa fa-female"></span>Femenino
 						</div>
 				 </div>
             </div>
-			</form>
-            <form action="contact" id="contact-form" class="form-horizontal">
+		        <div class="form-group">
+        <div class="col-lg-4 col-lg-12">
+          <label class="col-lg-3 control-label">Actividad F&iacute;sica*:</label>
+            <div class="col-lg-6">
+            
+                <input type="radio" name="actfisica" value="l"> Ligero
+                <input type="radio" name="actfisica" value="m"> Moderado
+                <input type="radio" name="actfisica" value="a"> Alta</br>
+
+            </div>
+         </div>
+            </div>
+
+      <div class="form-group">
+        <div class="col-lg-4 col-lg-12">
+          <label class="col-lg-3 control-label">Edad *:</label>
+            <div class="col-lg-4">
+              <input type="text"  placeholder="Edad" class="form-control" name="edad">
+            </div>
+         </div>
+            </div>
+
   			<div class="form-group">
+        <div class="col-lg-12 col-lg-14">
+          <label class="col-lg-3 control-label" for="name">Estatura (Kg.):</label>
+            <div class="col-lg-4">
+              <input type="text"  placeholder="Kilos (Ej: 65.5)" class="form-control" name="estatura">
+            </div>
+         </div>
+            </div>
+
+
+        <div class="form-group">
 				<div class="col-lg-12 col-lg-14">
-					<label class="col-lg-3 control-label" for="name">Peso *:</label>
+					<label class="col-lg-3 control-label" for="name">Peso (cm.):</label>
 						<div class="col-lg-4">
-						  <input type="text"  placeholder="Peso" class="form-control" name="name" id="name">
+						  <input type="text" placeholder="Centimetros (Ej: 1.65)" class="form-control" name="peso" value="<?php ?>">
 						</div>
 				 </div>
             </div>
-			</form>
-           <form action="contact" id="contact-form" class="form-horizontal">
-  			<div class="form-group">
-				<div class="col-lg-12 col-lg-14">
-					<label class="col-lg-3 control-label" for="name">Estatura *:</label>
-						<div class="col-lg-4">
-						  <input type="text"  placeholder="Estatura" class="form-control" name="lastname" id="lastname">
-						</div>
-				 </div>
+
+            <div class="form-group">
+        <div class="col-lg-12 col-lg-14">
+          <label class="col-lg-3 control-label" for="name">Objetivo *:</label>
+            <div class="col-lg-4">
+                  <input type="radio" name="objetivo" value="1"> Comer Sano</br>
+                  <input type="radio" name="objetivo" value="2"> Bajar de Peso</br>
+                  <input type="radio" name="objetivo" value="3"> Subir de Peso</br>
             </div>
-			</form>
-            <form action="contact" id="contact-form" class="form-horizontal">
-  			<div class="form-group">
-				<div class="col-lg-4 col-lg-12">
-					<label class="col-lg-3 control-label" for="name">Edad *:</label>
-						<div class="col-lg-4">
-						  <input type="text"  placeholder="Ubicaci&oacute;n" class="form-control" name="name" id="name">
-						</div>
-				 </div>
+         </div>
             </div>
-			</form>
-            <form action="contact" id="contact-form" class="form-horizontal">
-  			<div class="form-group">
-				<div class="col-lg-4 col-lg-12">
-					<label class="col-lg-3 control-label" for="name">Actividad F&iacute;sica *:</label>
-						<div class="col-lg-6">
-                         <label class="checkbox-inline">
-  <input type="checkbox"  id="inlineCheckbox1"  value="option1"> Ligera
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox"  id="inlineCheckbox2"  value="option1"> Moderada
-</label>
-<label class="checkbox-inline">
-  <input type="checkbox"  id="inlineCheckbox3"  value="option1"> Alta
-</label>
-						</div>
-				 </div>
-            </div>
-			</form>
-            <form action="contact" id="contact-form" class="form-horizontal">
-  			<div class="form-group">
-				<div class="col-lg-12 col-lg-14">
-					<label class="col-lg-3 control-label" for="name"> Enfermedades *:</label>
-						<div class="col-lg-4">
-						 
-    <input type="checkbox" id="myCheck"> Diabetes I <br> 
-    <input type="checkbox" id="myCheck"> Diabetes II <br> 
-	<input type="checkbox" id="myCheck"> Obesidad <br> 
-    <input type="checkbox" id="myCheck"> Hipertensi&oacute;n <br> 
-    <input type="checkbox" id="myCheck"> Problemas Card&iacute;acos <br>
-						</div>
-				 </div>
-            </div>
+
 			</form>
             
 </div>

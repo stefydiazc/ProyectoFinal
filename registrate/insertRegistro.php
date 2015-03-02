@@ -24,7 +24,7 @@ $RegistrateCollectorObj = new RegistrateCollector();
 $RegistrateCollectorObj->createRegistrate($email, $contrasena);
 //echo "</br>";
 //echo "Usuario Agregado </br>";
-echo "<META HTTP-EQUIV='refresh' content='0; url=../objetivos.php'>";
+echo "<META HTTP-EQUIV='refresh' content='0; url=../objetivos.php?'>";
 ?>
 <!--<div><a href="objetivos.php">Continuar</a></div>-->
 

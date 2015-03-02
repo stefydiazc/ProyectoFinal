@@ -1,7 +1,7 @@
-<?php
-  session_start();
+<?php  
+session_start();
+$usuario = $_SESSION["email"];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,31 +36,52 @@
       <div class="container">
           <!-- !FULL WIDTH -->
           <!-- !SECTION EMPHASIS 1 -->
-
+<?php
+if(!isset($_SESSION['userid']))
+{
+    if(isset($_POST['login']))
+    {
+        if(verificar_login($_POST['user'],$_POST['password'],$result) == 1)
+        {
+            $_SESSION['userid'] = $result->idusuario;
+            header("location:index.php");
+        }
+        else
+        {
+            echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>';
+        }
+    }
+?>
           <div class="row">
               <div class="col-md-6 space-right-20">
                   <section class="login element-emphasis-strong">
                       <h2 class="strong-header large-header">
                           Iniciar Sesi&oacute;n
                       </h2>                     
-                      <form role="form" action="" method="post" class="validateIt" data-show-errors="true" data-hide-form="false">
-                          <div class="form-group">
-                              <label for="email">Correo Electr&oacute;nico</label>
+                      <form role="form" action="validarlogin.php" method="post" class="" data-show-errors="true" data-hide-form="false">
+                          
+                              <label>Correo Electr&oacute;nico</label>
                               <input type="email" class="form-control" id="email" name="email" autofocus required>
-                          </div>
-                          <div class="form-group">
-                              <label for="password">Contrase&ntilde;a</label>
-                              <input type="password" class="form-control" id="password" name="password" autofocus required >
-                          </div>
+                          
+                          
+                              <label>Contrase&ntilde;a</label>
+                              <input type="password" class="form-control" id="password" name="contrasena" autofocus required ><br></br>
+                          
 	                          
-                          	<!--<input type="submit" name="iniciar_sesion" class="btn btn-primary pull-left" value="Entrar">-->
-                           	<a href="perfil.php" class="btn btn-primary pull-left"> Entrar </a>
+                          	<input type="submit" name="entrar" class="btn btn-primary pull-left" value="Entrar">
+                           	<!--<a href="perfil.php" class="btn btn-primary pull-left"> Entrar </a>-->
                             
                           	<input type="submit" name="enviar_clave" class="btn btn-link pull-right"value="Olvid&oacute; su contrase&ntilde;a?"> 
                           <div class="clearfix"></div>
                       </form>
-                         
                   </section>
+
+<?php
+} else {
+    echo 'Su usuario ingreso correctamente.';
+    echo '<a href="logout.php">Logout</a>';
+}
+?>
               </div>
               <div class="col-md-6 space-left-20">
                   <section class="element-emphasis-weak">

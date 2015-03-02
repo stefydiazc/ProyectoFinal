@@ -14,4 +14,3 @@ function updateUsuario($idUsuario, $objetivo) {
 
 }
 ?>
-
