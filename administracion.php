@@ -1,20 +1,37 @@
 <?php
 	session_start();
 ?>
-<title> Administraci&Oacute;n </title>
+<html lang="en">
+ 
+ <?php include 'headAdm.php';?>
+  
+  
+<body>
+  
+ <?php include 'menuAdm.php';?>
 
-<tr><td><center>ADMINISTRACI&Oacute;N - COME & DISFRUTA</center></td></tr>
+<title> Administraci&oacute;n </title>
 
+
+ <center><h2>Administraci&oacute;n</h2></center>
+          
 <center>
 
 <p><a href="admUsuario/usuario-admin.php" class=""> Usuario </a></p>
 
-<p><a href="admUsuario/usuario-admin.php" class=""> Servicio </a></p>
+<p><a href="adminObjetivo/objetivo-admin.php" class=""> Objetivo </a></p>
 
-<p><a href="adminReceta/index.php" class=""> Receta </a></p>
+<p><a href="admPlan/plan-admin.php" class=""> Planes </a></p>
 
-<p><a href="adminUsuPlanRec/index.php" class=""> Usuario - Plan - Receta </a></p>
+<p><a href="admServicio/servicio-admin.php" class=""> Servicios </a></p>
+
+<p><a href="adminReceta/receta-admin.php" class=""> Recetas </a></p>
+
+<p><a href="adminUsuObjRec/usuobjrec-admin.php" class=""> Usuario - Objetivo - Recetas </a></p>
 
 </center>
 
 
+
+</body>
+</html>
