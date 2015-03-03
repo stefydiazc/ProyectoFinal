@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS `enfermedad`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `enfermedad` (
   `idenfermedad` int(11) NOT NULL AUTO_INCREMENT COMMENT '	',
-  `enf_nombre` varchar(45) DEFAULT NULL,
+  `nombre` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idenfermedad`),
   UNIQUE KEY `idenfermedad_UNIQUE` (`idenfermedad`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `enfermedad` (
 
 LOCK TABLES `enfermedad` WRITE;
 /*!40000 ALTER TABLE `enfermedad` DISABLE KEYS */;
+INSERT INTO `enfermedad` VALUES (1,'Diabetes'),(2,'Obesidad');
 /*!40000 ALTER TABLE `enfermedad` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,8 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2015-02-25 14:03:34
-=======
--- Dump completed on 2015-02-25 20:34:51
->>>>>>> c2b5a91ef514293361774d09a4065c5ef5fe0537
+-- Dump completed on 2015-03-03 13:09:43

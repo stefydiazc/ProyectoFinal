@@ -35,8 +35,7 @@ CREATE TABLE `usuxplanxrec` (
   KEY `fk_usuxplanxrec_2_idx` (`idplan`),
   KEY `fk_usuxplanxrec_3_idx` (`idrecetas`),
   CONSTRAINT `fk_usuxplanxrec_1` FOREIGN KEY (`idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuxplanxrec_2` FOREIGN KEY (`idplan`) REFERENCES `plan` (`idplan`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuxplanxrec_3` FOREIGN KEY (`idrecetas`) REFERENCES `recetas` (`idrecetas`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_usuxplanxrec_2` FOREIGN KEY (`idplan`) REFERENCES `plan` (`idplan`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -58,8 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2015-02-25 14:03:34
-=======
--- Dump completed on 2015-02-25 20:34:51
->>>>>>> c2b5a91ef514293361774d09a4065c5ef5fe0537
+-- Dump completed on 2015-03-03 13:09:43

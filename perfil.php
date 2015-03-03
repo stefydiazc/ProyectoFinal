@@ -69,7 +69,7 @@ $idUsuario=$_GET["id"];
         <div class="col-lg-12 col-lg-14">
           <label class="col-lg-3 control-label" for="name">Nombres (*):</label>
             <div class="col-lg-9">
-              <input type="text"  placeholder="Nombres" class="form-control" value="<?php echo $ObjUsuario->getNombre(); ?>" name="nombre">
+              <input type="text"  placeholder="Nombres" class="form-control" value="<?php //echo $ObjUsuario->getNombre(); ?>" name="nombre">
             </div>
          </div>
             </div>
@@ -77,7 +77,7 @@ $idUsuario=$_GET["id"];
         <div class="col-lg-12 col-lg-14">
           <label class="col-lg-3 control-label" for="name">Apellidos (*):</label>
             <div class="col-lg-9">
-              <input type="text"  placeholder="Apellidos" class="form-control" value="<?php echo $ObjUsuario->getApellido(); ?>" name="apellido">
+              <input type="text"  placeholder="Apellidos" class="form-control" value="<?php //echo $ObjUsuario->getApellido(); ?>" name="apellido">
             </div>
          </div>
             </div>
@@ -85,7 +85,7 @@ $idUsuario=$_GET["id"];
         <div class="col-lg-4 col-lg-12">
           <label class="col-lg-3 control-label" for="name">Email (*):</label>
             <div class="col-lg-9">
-              <input type="text"  placeholder="Email" class="form-control" value="<?php echo $ObjUsuario->getEmail(); ?>" name="email" readonly>
+              <input type="text"  placeholder="Email" class="form-control" value="<?php //echo $ObjUsuario->getEmail(); ?>" name="email" readonly>
             </div>
          </div>
             </div>
@@ -93,7 +93,7 @@ $idUsuario=$_GET["id"];
         <div class="col-lg-4 col-lg-12">
           <label class="col-lg-3 control-label" for="name">Contrase&ntilde;a  (*):</label>
             <div class="col-lg-9">
-              <input type="text"  placeholder="Contrase&ntilde;a " class="form-control" value="<?php echo $ObjUsuario->getContrasena(); ?>"name="contrasena">
+              <input type="text"  placeholder="Contrase&ntilde;a " class="form-control" value="<?php //echo $ObjUsuario->getContrasena(); ?>"name="contrasena">
             </div>
          </div>
             </div>

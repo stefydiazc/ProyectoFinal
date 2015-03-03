@@ -30,7 +30,7 @@ CREATE TABLE `servicio` (
   `descripcion` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idServicio`),
   UNIQUE KEY `idservicios_UNIQUE` (`idServicio`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `servicio` (
 
 LOCK TABLES `servicio` WRITE;
 /*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
-INSERT INTO `servicio` VALUES (1,'Dieta','2 semana');
+INSERT INTO `servicio` VALUES (1,'Programa de ejercicios','Entrenador Personal'),(2,'Ejercicio','Rutina diaria'),(3,'Dieta Vegetables','comer mucho vegetal'),(4,'Consulta en linea','consulta con un nutricionista'),(5,'Dieta personalizada','Recetas personalizadas'),(6,'Nuevo','oili');
 /*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-25 20:34:51
+-- Dump completed on 2015-03-03 13:09:42

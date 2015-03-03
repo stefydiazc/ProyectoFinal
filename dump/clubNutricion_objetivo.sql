@@ -18,27 +18,27 @@ USE `clubNutricion`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `servicios`
+-- Table structure for table `objetivo`
 --
 
-DROP TABLE IF EXISTS `servicios`;
+DROP TABLE IF EXISTS `objetivo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `servicios` (
-  `idservicios` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idservicios`),
-  UNIQUE KEY `idservicios_UNIQUE` (`idservicios`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `objetivo` (
+  `idobjetivo` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idobjetivo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `servicios`
+-- Dumping data for table `objetivo`
 --
 
-LOCK TABLES `servicios` WRITE;
-/*!40000 ALTER TABLE `servicios` DISABLE KEYS */;
-/*!40000 ALTER TABLE `servicios` ENABLE KEYS */;
+LOCK TABLES `objetivo` WRITE;
+/*!40000 ALTER TABLE `objetivo` DISABLE KEYS */;
+INSERT INTO `objetivo` VALUES (1,'Comer Sano'),(2,'Bajar de Peso'),(3,'Subir de Peso');
+/*!40000 ALTER TABLE `objetivo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-25 14:03:34
+-- Dump completed on 2015-03-03 13:09:43

@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `receta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `receta` (
-  `idrecetas` int(11) NOT NULL AUTO_INCREMENT,
+  `idreceta` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) DEFAULT NULL,
   `descripcion` varchar(100) DEFAULT NULL,
   `informacionnutricional` varchar(100) DEFAULT NULL,
   `foto` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`idrecetas`),
-  UNIQUE KEY `idrecetas_UNIQUE` (`idrecetas`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`idreceta`),
+  UNIQUE KEY `idrecetas_UNIQUE` (`idreceta`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `receta` (
 
 LOCK TABLES `receta` WRITE;
 /*!40000 ALTER TABLE `receta` DISABLE KEYS */;
+INSERT INTO `receta` VALUES (10,'Ensalada de verduras','lechuga, tomate, cebolla','    Calorías 112 (4,7%)		Azúcares 0,4g (0,4%)        Grasa 7,1g (8,5%)		Grasa saturada 1,3g (5,4%)  ','null'),(11,'Sandwich de Salmón','Pan, salmon, cebolla','    Calorías 112 (4,7%)		Azúcares 0,4g (0,4%)        Grasa 7,1g (8,5%)		Grasa saturada 1,3g (5,4%)  ','null');
 /*!40000 ALTER TABLE `receta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-25 20:34:51
+-- Dump completed on 2015-03-03 13:09:43

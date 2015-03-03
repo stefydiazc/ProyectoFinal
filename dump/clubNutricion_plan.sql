@@ -25,11 +25,16 @@ DROP TABLE IF EXISTS `plan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `plan` (
-  `idplan` int(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idplan`),
-  UNIQUE KEY `idplan_UNIQUE` (`idplan`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idPlan` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) DEFAULT NULL COMMENT '		',
+  `descripcion` varchar(200) DEFAULT NULL,
+  `idServicio` int(11) DEFAULT NULL,
+  `precio` double DEFAULT NULL,
+  PRIMARY KEY (`idPlan`),
+  UNIQUE KEY `idplan_UNIQUE` (`idPlan`),
+  KEY `fk_idservicio_idx` (`idServicio`),
+  CONSTRAINT `fk_idservicio` FOREIGN KEY (`idServicio`) REFERENCES `servicio` (`idservicio`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1118 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +43,7 @@ CREATE TABLE `plan` (
 
 LOCK TABLES `plan` WRITE;
 /*!40000 ALTER TABLE `plan` DISABLE KEYS */;
+INSERT INTO `plan` VALUES (1111,'Essential','Plan nutricional',3,45),(1112,'Premium','Plan nutricional + ejercicios',2,60),(1113,'Golden','Plan nutricional + ejercicios + Cita online con nutricionista',2,80);
 /*!40000 ALTER TABLE `plan` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,8 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2015-02-25 14:03:34
-=======
--- Dump completed on 2015-02-25 20:34:51
->>>>>>> c2b5a91ef514293361774d09a4065c5ef5fe0537
+-- Dump completed on 2015-03-03 13:09:43
