@@ -3,7 +3,7 @@
 
 
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuUsuario.php';?>
 
 <div id="main">
 <?php

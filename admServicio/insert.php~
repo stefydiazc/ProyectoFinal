@@ -3,7 +3,7 @@
 
 <body>
 <div id="main">
-<?php include '..//menuAdm.php';?>
+<?php include 'menuServicio.php';?>
 <?php
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];

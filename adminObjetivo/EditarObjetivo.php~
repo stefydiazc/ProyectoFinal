@@ -6,7 +6,7 @@
 <title>Editar Objetivo</title>
 </head>
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuObjetivo.php';?>
 <?php
 $idObjetivo=$_GET["idObjetivo"];
 //echo "xxxxxxx".$idServicio;

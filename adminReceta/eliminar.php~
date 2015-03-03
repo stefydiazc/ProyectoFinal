@@ -1,8 +1,8 @@
 <html>
-<?php include '..//headAdm.php';?> 
+<?php include 'headAdm.php';?> 
 
 <body>
-	<?php include '..//menuAdm.php';?> 
+	<?php include 'menuAdm.php';?> 
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP

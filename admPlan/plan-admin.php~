@@ -6,7 +6,7 @@ include_once("PlanCollector.php");
 $PlanCollectorObj = new PlanCollector();
 ?>
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuPlan.php';?>
 
 <div id="main">
 <table>

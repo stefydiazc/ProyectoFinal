@@ -1,11 +1,11 @@
 <html>
-<?php include 'headUsuario.php';?>
+<?php include '..//headAdm.php';?>
 <?php
 include_once("UsuarioCollector.php");
 $UsuarioCollectorObj = new UsuarioCollector();
 ?>
 <body>
-  <?php include 'menuUsuario.php';?>
+  <?php include '..//menuAdm.php';?>
 <div id="main">
 <table>
 <h1>Usuario</h1>

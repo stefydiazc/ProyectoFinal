@@ -1,9 +1,9 @@
 <html>
-<?php include '..//headAdm.php';?>
+<?php include 'headPlan.php';?>
 
 
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuPlan.php';?>
 
 <div id="main">
 <?php

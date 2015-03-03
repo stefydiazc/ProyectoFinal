@@ -1,5 +1,5 @@
 <html>
-<?php include '..//headAdm.php';?>
+<?php include 'headPlan.php';?>
 
 
 <body>

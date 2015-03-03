@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'headPlan.php';?>
+<?php include '..//headAdm.php';?>
 
 <meta charset="utf-8" />
 <title>Editar Plan</title>
 </head>
 <body>
-<?php include 'menuPlan.php';?>
+<?php include '..//menuAdm.php';?>
 
 <?php
 $idPlan=$_GET["idPlan"];

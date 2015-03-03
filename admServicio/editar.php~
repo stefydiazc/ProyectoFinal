@@ -1,26 +1,26 @@
 <html>
 <?php include '..//headAdm.php';?>
 
+
 <body>
+<?php include 'menuServicio.php';?>
+
 <div id="main">
-<?php include '..//menuAdm.php';?>
 <?php
+
+//print_r($_POST);
+
+$idServicio=$_POST["idServicio"];
 $nombre = $_POST ['nombre'];
 $descripcion = $_POST ['descripcion'];
 
-//echo $peso."</br>";
-//echo $objetivo."</br>";
-//$valor="manuel";
-echo "<h3>Servicio Agregado </h3>";
-echo 'Servicio :  ' . htmlspecialchars($nombre)." .";
-
+echo "Edici&oacute;n en proceso ....  </br>";
 
 include_once("ServicioCollector.php");
-
 $ServicioCollectorObj = new ServicioCollector();
-$ServicioCollectorObj->createServicio($nombre, $descripcion);
-echo "</br>";
-echo "</br>";
+$ServicioCollectorObj->updateServicio($idServicio,$nombre, $descripcion);
+
+echo "id :".$idServicio." actualizado a:".$nombre." </br>";
 ?>
 <div><a href="servicio-admin.php">Volver al Inicio</a></div>
 </div>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'headPlan.php';?>
+<?php include '..//headAdm.php';?>
 
 <meta charset="utf-8" />
 <title>Nuevo Plan</title>
 </head>
 <body>
-<?php include 'menuPlan.php';?>
+<?php include '..//menuAdm.php';?>
 <h1>Agregar nuevo plan</h1>
 <form action="insert.php" method="post" >
 <p>

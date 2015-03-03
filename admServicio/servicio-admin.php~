@@ -5,7 +5,7 @@ include_once("ServicioCollector.php");
 $ServicioCollectorObj = new ServicioCollector();
 ?>
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuServicio.php';?>
 <div id="main">
 <table>
 <h1>Servicios</h1>

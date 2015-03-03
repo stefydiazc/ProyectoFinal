@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include '..//head.php';?>
+<?php include 'head.php';?>
 
 <meta charset="utf-8" />
 <title>Editar Servicios</title>

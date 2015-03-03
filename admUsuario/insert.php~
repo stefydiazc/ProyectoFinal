@@ -3,15 +3,10 @@
 
 
 <body>
-<?php include '..//menuAdm.php';?>
+<?php include 'menuUsuario.php';?>
 
 <div id="main">
 <?php
-
-print_r($_POST);
-
-
-$idUsuario=$_POST["idUsuario"];
 $nombre = $_POST ['nombre'];
 $apellido = $_POST ['apellido'];
 $email = $_POST ['email'];
@@ -23,13 +18,18 @@ $estatura = $_POST ['estatura'];
 $peso = $_POST ['peso'];
 $objetivo = $_POST ['objetivo'];
 
-echo "Edici&oacute;n en proceso ....  </br>";
+//echo $peso."</br>";
+//echo $objetivo."</br>";
+//$valor="manuel";
+echo 'Hola ' . htmlspecialchars($nombre)."  ". htmlspecialchars($apellido) . ' !';
+
 
 include_once("UsuarioCollector.php");
-$UsuarioCollectorObj = new UsuarioCollector();
-$UsuarioCollectorObj->updateUsuario($idUsuario,$nombre, $apellido, $email, $contrasena, $genero, $actfisica, $edad, $estatura, $peso, $objetivo);
 
-echo "id :".$idUsuario." actualizado a:".$nombre." </br>";
+$UsuarioCollectorObj = new UsuarioCollector();
+$UsuarioCollectorObj->createUsuario($nombre, $apellido, $email, $contrasena, $genero, $actfisica, $edad, $estatura, $peso, $objetivo);
+echo "</br>";
+echo "Usuario Agregado </br>";
 ?>
 <div><a href="usuario-admin.php">Volver al Inicio</a></div>
 </div>

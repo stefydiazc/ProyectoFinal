@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php include '..//menuAdm.php';?> 
+<?php include 'menuAdm.php';?> 
 <?php
 $idReceta=$_GET["idReceta"];
 //echo "xxxxxxx".$idUsuario;

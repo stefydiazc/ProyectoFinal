@@ -1,7 +1,7 @@
 <html>
 	<?php include '..//headAdm.php.php';?>
 <body>
-	<?php include '..//menuAdm.php';?>
+	<?php include 'menuEnfermedad.php';?>
 <div id="main">
 <?php
 //obtener el valor de ID que viene del metodo GET a traves de HTTP

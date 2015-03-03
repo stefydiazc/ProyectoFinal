@@ -2,7 +2,7 @@
 <?php include '..//headAdm.php';?>
 
 <body>
-<?php include '//menuAdm.php';?>
+<?php include 'menuEnfermedad.php';?>
 <div id="main">
 <?php
 $nombre = $_POST ['nombre'];
