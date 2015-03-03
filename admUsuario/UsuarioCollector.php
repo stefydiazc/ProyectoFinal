@@ -7,6 +7,7 @@ class UsuarioCollector extends Collector
 {
   
   function showUsuario($idUsuario) {
+    echo "$idUsuario";
     $row = self::$db->getRows("SELECT * FROM usuario where idusuario= ? ", array("{$idUsuario}")); 
     $ObjUsuario = new Usuario($row[0]{'idusuario'},$row[0]{'nombre'},$row[0]{'apellido'},
                   $row[0]{'email'}, $row[0]{'contrasena'}, $row[0]{'genero'}, $row[0]{'actfisica'},
@@ -27,6 +28,15 @@ class UsuarioCollector extends Collector
     $insertrow = self::$db->insertRow("INSERT INTO clubNutricion.usuario (idusuario, nombre, apellido, email, contrasena, genero, actfisica, edad, estatura, peso, objetivo)
                                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", array(null, "{$nombre}", "{$apellido}", "{$email}", "{$contrasena}", "{$genero}", "{$actfisica}", "{$edad}", "{$estatura}", "{$peso}", "{$objetivo}"));
   }  
+
+  function createRegistrate($email, $contrasena) { 
+  // echo "$email.$contrasena";
+   $sql= "INSERT INTO clubNutricion.usuario (idUsuario, email, contrasena) VALUES". 
+                                  "(null, '$email', '$contrasena')";   
+    //echo $sql;
+    $insertrow = self::$db->insertRow($sql);
+    
+  }
 
   function readUsuarios() {
     $rows = self::$db->getRows("SELECT * FROM usuario ");        
@@ -49,6 +59,13 @@ class UsuarioCollector extends Collector
                       usuario.peso = ?, usuario.objetivo = ? WHERE usuario.idusuario = ? ", array("{$nombre}", "{$apellido}",
                       "{$email}", "{$contrasena}", "{$genero}", "{$actfisica}", "{$edad}", "{$estatura}", "{$peso}", "{$objetivo}",$idUsuario));
   }  
+
+  function updateObjetivo($id, $objetivo) {
+
+    //echo "$idUsuario. $nombre. $apellido. $email. $contrasena. $genero. $actfisica. $edad. $estatura. $peso. $objetivo";
+    $insertrow = self::$db->updateRow("UPDATE clubNutricion.usuario SET usuario.objetivo = ? WHERE usuario.idusuario = ? ", array("{$objetivo}",$idUsuario));
+  } 
+
 
   function deleteUsuario($idUsuario) {    
     $deleterow = self::$db->deleteRow("DELETE FROM clubNutricion.usuario WHERE idusuario= ?", array("{$idUsuario}"));

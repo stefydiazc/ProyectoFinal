@@ -5,7 +5,7 @@ include_once("UsuarioCollector.php");
 $UsuarioCollectorObj = new UsuarioCollector();
 ?>
 <body>
-  <?php include '..//menuAdm.php';?>
+<?php include '..//menuAdm.php';?>
 <div id="main">
 <table>
 <h1>Usuario</h1>
@@ -22,27 +22,25 @@ $UsuarioCollectorObj = new UsuarioCollector();
 <td><strong>Estatura</strong></td>
 <td><strong>Peso</strong></td>
 <td><strong>Objetivo</strong></td></tr>
-
 <?php
 foreach ($UsuarioCollectorObj->readUsuarios() as $c){
- //print_r($c);
-  echo "<tr>";
-  echo "<td>".$c->getIdUsuario() ."</td>";
-  echo "<td>".$c->getNombre()."</td>";
-  echo "<td>".$c->getApellido()."</td>";
-  echo "<td>".$c->getEmail()."</td>";
-  echo "<td>".$c->getContrasena()."</td>";
-  echo "<td>".$c->getGenero()."</td>";
-  echo "<td>".$c->getActfisica()."</td>";
-  echo "<td>".$c->getEdad()."</td>";
-  echo "<td>".$c->getEstatura()."</td>";
-  echo "<td>".$c->getPeso()."</td>";
-  echo "<td>".$c->getObjetivo()."</td>";
-
-  echo "<td><a href='formularioUsuarioEditar.php?idUsuario=".$c->getIdUsuario()."'> Editar</a></td>";
- // if ($c->getIdUsuario() > 1)
-  	echo "<td><a href='eliminar.php?idUsuario=".$c->getIdUsuario()."'> Eliminar</a></td>"; 
-  echo "</tr>"; 
+//print_r($c);
+echo "<tr>";
+echo "<td>".$c->getIdUsuario() ."</td>";
+echo "<td>".$c->getNombre()."</td>";
+echo "<td>".$c->getApellido()."</td>";
+echo "<td>".$c->getEmail()."</td>";
+echo "<td>".$c->getContrasena()."</td>";
+echo "<td>".$c->getGenero()."</td>";
+echo "<td>".$c->getActfisica()."</td>";
+echo "<td>".$c->getEdad()."</td>";
+echo "<td>".$c->getEstatura()."</td>";
+echo "<td>".$c->getPeso()."</td>";
+echo "<td>".$c->getObjetivo()."</td>";
+echo "<td><a href='formularioUsuarioEditar.php?idUsuario=".$c->getIdUsuario()."'> Editar</a></td>";
+// if ($c->getIdUsuario() > 1)
+echo "<td><a href='eliminar.php?idUsuario=".$c->getIdUsuario()."'> Eliminar</a></td>";
+echo "</tr>";
 }
 ?>
 

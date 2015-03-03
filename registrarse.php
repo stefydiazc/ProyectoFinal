@@ -27,7 +27,7 @@
           <br>
           <div class="col-md-6 col-md-offset-4">
 		  <!-- contact form starts -->
-            <form action="registrate/insertRegistro.php" id="contact-form" class="form-horizontal" method="post">
+            <form action="admUsuario/insertRegistro.php" id="contact-form" class="form-horizontal" method="post">
 			   
 						    <div class="form-group">
 						      <label class="col-sm-2 control-label" >Correo Electr&oacute;nico </label>
@@ -50,7 +50,7 @@
 	              <div class="col-sm-offset-4 col-sm-8">
 			            <!--<button type="submit" class="btn btn-success">Enviar</button>-->
                         <!--<a href="objetivos.php" type= "submit" class="btn btn-success"> Enviar </a>-->
-                        <input href="objetivos.php" type="submit" value="Guardar" class="btn btn-success"/>
+                        <input href="gracias.php" type="submit" value="Guardar" class="btn btn-success"/>
 	    			      <a href="index.php" class="btn btn-primary"> Cancelar </a>
 	        			</div>
 		</form>		
