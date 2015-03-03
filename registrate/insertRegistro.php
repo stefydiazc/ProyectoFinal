@@ -22,9 +22,13 @@ include_once("RegistrateCollector.php");
 
 $RegistrateCollectorObj = new RegistrateCollector();
 $RegistrateCollectorObj->createRegistrate($email, $contrasena);
+
+$ObjUsuario = $RegistrateCollectorObj->showUsuario($email);
+$id = $ObjUsuario->getIdUsuario();
+
 //echo "</br>";
 //echo "Usuario Agregado </br>";
-echo "<META HTTP-EQUIV='refresh' content='0; url=../objetivos.php?'>";
+echo "<META HTTP-EQUIV='refresh' content='0; url=../buscar.php?email=$email'>";
 ?>
 <!--<div><a href="objetivos.php">Continuar</a></div>-->
 

@@ -43,14 +43,14 @@ $email = $_SESSION["email"];
                       <h2 class="strong-header large-header">
                           Iniciar Sesi&oacute;n
                       </h2>                     
-                      <form role="form" action="admUsuario/ValidarLogin.php" method="post" class="" data-show-errors="true">
+                      <form role="form" action="ValidarLogin.php" method="post" class="" data-show-errors="true" data-hide-form="false">
                           
                               <label>Correo Electr&oacute;nico</label>
                               <input type="email" class="form-control" id="email" name="email" autofocus required>
                           
                           
                               <label>Contrase&ntilde;a</label>
-                              <input type="password" class="form-control" id="contrasena" name="contrasena" autofocus required ><br></br>
+                              <input type="password" class="form-control" id="password" name="contrasena" autofocus required ><br></br>
                           
 	                          
                           	<input type="submit" name="entrar" class="btn btn-primary pull-left" value="Entrar">
@@ -61,7 +61,12 @@ $email = $_SESSION["email"];
                       </form>
                   </section>
 
-
+<?php
+} else {
+    echo 'Su usuario ingreso correctamente.';
+    echo '<a href="logout.php">Logout</a>';
+}
+?>
               </div>
               <div class="col-md-6 space-left-20">
                   <section class="element-emphasis-weak">

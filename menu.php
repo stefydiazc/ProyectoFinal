@@ -23,7 +23,7 @@
         <li><a href="index.php#services"><i class="service-icon fa fa-laptop"></i>&nbsp;Tips</a></li>
         <li><a href="index.php#portfolio"><i class="service-icon fa fa-laptop"></i>&nbsp;Nuestras Recetas</a></li>
         <!--<li><a href="" onclick="location.href='logout.php'"><i class="fa fa-user"></i><?php// echo " ".$_SESSION["email"]; ?></a></li>-->
-        <li><a href="login.php"><i class="service-icon fa fa-male"></i>&nbsp;Login</a></li>
+        <li><a href="login.php"><i class="service-icon fa fa-male"></i>&nbsp;Login <?php echo $_SESSION["email"]; ?></a></li>
         <li><a href="index.php#contact"><i class="service-icon fa fa-envelope"></i>&nbsp;Cont&aacute;ctanos</a></li>
     </ul>
   <?php //} else {?> 

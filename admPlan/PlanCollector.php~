@@ -13,10 +13,10 @@ class PlanCollector extends Collector
   }
 
    function createPlan($nombre, $descripcion, $idServicio, $precio) { 
-   echo "$nombre.$descripcion.$idServicio.$precio";
+   //echo "$nombre.$descripcion.$idServicio.$precio";
    $sql= "INSERT INTO clubNutricion.plan (idPlan, nombre, descripcion, idServicio, precio) VALUES". 
                                   "(null, '$nombre', '$descripcion', $idServicio, $precio)";   
-    echo $sql;
+    //echo $sql;
     $insertrow = self::$db->insertRow($sql);
     echo $insertrow;
   }  

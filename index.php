@@ -135,12 +135,7 @@ session_start();
                   <span class="overlay"><span class="valign"></span><span class="title">Pollo y Esparragos</span></span>
                 </a>                
             </li>
-        <li class="col-md-4 col-sm-4 col-xs-12 mix nature" data-cat="nature">
-                <a data-toggle="modal" data-target="#nature1" class="mix-cover">
-                  <img class="horizontal" src="img/pollouva.jpg" alt="placeholder">
-                  <span class="overlay"><span class="valign"></span><span class="title">Pollo salsa de uvas</span></span>
-                </a>
-            </li>
+        
             <li class="col-md-4 col-sm-4 col-xs-12 mix portraits" data-cat="portraits">
                 <a data-toggle="modal" data-target="#portrait3" class="mix-cover">
                   <img class="horizontal" src="img/tarta.jpg" alt="Tarta de manzana">
@@ -153,18 +148,7 @@ session_start();
                    <span class="overlay"><span class="valign"></span><span class="title">Ensalada de garbanzos</span></span>
                 </a>
             </li>
-        <li class="col-md-4 col-sm-4 col-xs-12 mix nature" data-cat="nature">
-                <a data-toggle="modal" data-target="#nature" class="mix-cover">
-                  <img class="horizontal" src="img/naranja.jpg" alt="placeholder">
-                  <span class="overlay"><span class="valign"></span><span class="title">Pollo a la naranja</span></span>
-                </a>
-            </li>
-            <li class="col-md-4 col-sm-4 col-xs-12 mix portraits" data-cat="portrait">
-                <a data-toggle="modal" data-target="#portrait4" class="mix-cover green">
-                  <img class="vertical" src="img/fresas.jpg" alt="Copa de Fresas y Yogurt">
-                  <span class="overlay"><span class="valign"></span><span class="title">Copa de Fresas y Yogurt</span></span>           
-                </a>
-            </li>
+        
         <li class="col-md-4 col-sm-4 col-xs-12 mix bw nature all" data-cat="bw">
                 <a data-toggle="modal" data-target="#forest" class="mix-cover green">
                   <img class="vertical" src="img/pina.jpg" alt="Brochetas de langostino">
@@ -256,30 +240,7 @@ session_start();
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="modal fade" id="portrait4" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title text-center"><strong>Copa de Fresas y Yogurt</strong></h3>
-      </div>
-      <div class="modal-body">
-       <img class="thumbnail" alt="Copa de Fresas y Yogurt" src="img/fresas.jpg"/>
-       
-       <strong>Informaci&oacute;n Nutricional:</strong>
 
-       <pre>
-       Calorías 112 (4,7%)		Azúcares 0,4g (0,4%)
-       Grasa 7,1g (8,5%)		Grasa saturada 1,3g (5,4%)
-       Sal 0,4g (5,6%)			Fibra 0,3g (1%)
-       </pre>
-      <strong>Ingredientes:</strong><br><br>
-      <a href="suscribete.php" class="btn btn-primary">Leer mas..</a>
-       
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <div class="modal fade" id="portrait5" tabindex="-1" role="dialog"  aria-hidden="true">
   <div class="modal-dialog">
@@ -305,29 +266,7 @@ session_start();
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="modal fade" id="nature" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title text-center"><strong>Filete de pollo a la naranja</strong></h3>
-      </div>
-      <div class="modal-body">
-       <img class="thumbnail" alt="Filete de pollo a la naranja" src="img/naranja.jpg"/>
-      
-      <strong>Informaci&oacute;n Nutricional:</strong>
 
-       <pre>
-       Calorías 112 (4,7%)		Azúcares 0,4g (0,4%)
-       Grasa 7,1g (8,5%)		Grasa saturada 1,3g (5,4%)
-       Sal 0,4g (5,6%)			Fibra 0,3g (1%)
-       </pre>
-      <strong>Ingredientes:</strong><br><br>
-      <a href="suscribete.php" class="btn btn-primary">Leer mas..</a>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <div class="modal fade" id="nature1" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">

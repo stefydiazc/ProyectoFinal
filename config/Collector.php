@@ -15,11 +15,13 @@ class Collector extends dataBase
   private $username  = DB_USER;
   private $password  = DB_PASS;
   private $dbname    = DB_NAME;
-    
+  
+
   public function __construct()
   {
     self::$db = new dataBase($this->username, $this->password, $this->host, $this->dbname);
   }
+
 
 }
 
